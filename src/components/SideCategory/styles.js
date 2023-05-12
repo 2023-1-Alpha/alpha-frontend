@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SideCategory = styled.div`
   display: flex;
   align-items: center;
-  width: 150px;
+  width: 142px;
   height: 60px;
   background: #ffffff;
   border: none;

@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import * as style from "./styles";
+import { SubTitleFont } from "../../components/style/font";
 
 export default function SelectMenu() {
   const [menuType, setMenuType] = useState(1);
@@ -211,9 +212,10 @@ export default function SelectMenu() {
         </>
       </style.Sidebar>
       <style.Menu>
-        <p style={{ fontWeight: "700", fontSize: "24px", color: "#000000" }}>
+        <SubTitleFont>
           {menuTypeName}
-        </p>
+        </SubTitleFont>
+        {/* 데이터 구조 나오면 여기부터 고쳐야 될듯 */}
         <style.MenuHeader>
           {menuType === 1 &&
             burgersHeader.data.map((item) => {
