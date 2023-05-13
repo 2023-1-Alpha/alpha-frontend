@@ -13,14 +13,10 @@ export const WhiteRoundedButton = styled.div`
     border-radius: 10px;
     padding: 30px;
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
     &:hover {
     background-color: #f6f6f6;
-  }
-  }
-  > p {
-    font-weight: "1000";
-    font-size: "24px";
-    color: "#000000";
+    }
   }
 
 
@@ -32,15 +28,10 @@ export const GrayRoundedButton = styled.div`
   > img {
     width: 60px;
     height: 60px;
-    margin: auto;
     border-radius: 20px;
     background: #f8f8f8;
     padding: 20px;
-  }
-  > p {
-    margin: 0;
-    font-weight: 900;
-    font-size: 12px;
+    margin-bottom: 11px;
   }
 `;
 
