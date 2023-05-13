@@ -3,7 +3,6 @@ import WhiteRoundedButton from "../../components/Button/WhiteRoundedButton";
 import * as style from "./styles";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 export default function Main() {
   const [userType, setUserType] = useState("");
