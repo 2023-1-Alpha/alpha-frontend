@@ -1,18 +1,19 @@
 import styled from "styled-components";
 
 export const Wrap = styled.div`
-  padding: 20px 20px 0;
+  padding-top: 37px;
   display: flex;
   flex-direction: row;
 `;
 
 export const Sidebar = styled.div`
-  width: 30%;
   display: flex;
   flex-direction: column;
   > img {
-    width: 100px;
-    height: 100px;
+    width: 105px;
+    height: 75px;
+    padding-left: 23px;
+    padding-bottom: 41px;
   }
   > span {
     margin-bottom: auto;
@@ -26,7 +27,7 @@ export const Menu = styled.div`
   display: flex;
   flex-direction: column;
   width: 70%;
-  height: 100vh;
+  margin-left: 30px;
 `;
 
 export const MenuHeader = styled.div`
@@ -35,17 +36,15 @@ export const MenuHeader = styled.div`
   gap: 20px;
   width: 100%;
   height: 30px;
-  margin-left:10px;
+  margin: 22px 0;
 `
 
 export const MenuList = styled.div`
   height: 600px;
   > div {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30%, auto));
-    grid-template-rows: repeat(auto-fill, minmax(20%, auto));
-    gap: 20px 10px;
-    padding: 8px;
+    grid-template-columns: repeat(3, 100px);
+    gap: 20px 20px;
     > p {
       text-overflow: ellipsis;
       overflow: hidden;

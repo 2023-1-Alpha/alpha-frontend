@@ -1,6 +1,7 @@
 import React from "react";
 import WhiteRoundedButton from "../../components/Button/WhiteRoundedButton";
 import * as style from "./styles";
+import { SubTitleFont } from "../../components/style/font"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -19,9 +20,9 @@ export default function Main() {
           src={process.env.PUBLIC_URL + "/Images/Main/Logo.svg"}
         />
       </style.LogoBlock>
-      <span style={{ fontWeight: "1000", fontSize: "24px", color: "#000000" }}>
-        식사 장소를 선택해주세요
-      </span>
+        <SubTitleFont>
+          식사 장소를 선택해주세요
+        </SubTitleFont>
       <style.SpaceBlock>
           <WhiteRoundedButton
             imgSrc={process.env.PUBLIC_URL + "/Images/Main/ForHere.svg"}

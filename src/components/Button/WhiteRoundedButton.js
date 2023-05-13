@@ -1,13 +1,14 @@
 import React from "react";
 import * as style from "./styles";
+import { ContentFontLarge } from "../style/font";
 
 function WhiteRoundedButton(props) {
   return (
     <style.WhiteRoundedButton onClick={props.onClick}>
       <img src={props.imgSrc} alt="selectSpace" />
-      <p style={{ fontWeight: "1000", fontSize: "20px", color: "#000000" }}>
+        <ContentFontLarge>
         {props.text}
-      </p>
+        </ContentFontLarge>
     </style.WhiteRoundedButton>
   );
 }

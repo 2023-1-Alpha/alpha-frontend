@@ -3,7 +3,7 @@
 .App {
   max-width: 545px;
   margin: 0 auto;
-  height: 1000px;
+  height: 100vh;
   width: auto;
   position: relative;
   word-break: keep-all;

@@ -1,10 +1,13 @@
 import React from "react";
 import * as style from "./styles";
+import { ContentFontSmall } from "../style/font";
 
 function WhiteFlatRoundedButton(props) {
   return (
     <style.WhiteFlatRoundedButton onClick={props.onClick}>
-      <p>{props.name}</p>
+      <ContentFontSmall>
+        {props.name}
+      </ContentFontSmall>
     </style.WhiteFlatRoundedButton>
   );
 }

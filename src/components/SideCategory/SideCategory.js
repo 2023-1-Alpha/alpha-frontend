@@ -1,13 +1,14 @@
 import React from "react";
 import * as style from "./styles";
+import { ContentFontMiddle } from "../style/font";
 
 function SideCategory(props) {
   return (
     <style.SideCategory onClick={props.onClick} active={props.active}>
       <img src={props.imgSrc} alt="sideImg"/>
-      <p>
+      <ContentFontMiddle>
         {props.sideMenu}
-      </p>
+      </ContentFontMiddle>
     </style.SideCategory>
   );
 }
