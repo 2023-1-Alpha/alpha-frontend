@@ -4,7 +4,6 @@ import * as style from "./styles";
 import { SubTitleFont } from "../../components/style/font"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 export default function Main() {
   const [userType, setUserType] = useState("");
