@@ -1,118 +1,72 @@
 import styled from "styled-components";
 
-export const Wrap = styled.div`
+export const SelectDetail = styled.div`
   padding: 20px 20px 0;
+  height: 100%;
   display: flex;
   flex-direction: column;
-`;
-
-export const Header = styled.div`
-  display: flex;
-  padding: 20px 20px 0;
-  > img {
-    width: 100px;
-    height: 100px;
-  }
-`;
-export const ProgressSelectContainer = styled.div`
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 360px;
-  height: 10px;
-  background-color: red;
-
-
 `;
-export const Select = styled.div`
-  
+
+export const btnContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  margin-bottom: 40px;
+  width: 364px;
+  height: 200px;
+  border-radius: 30px;
+`
+export const countAndCart = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 124px;
 `
 
-
-export const ProgressDotContainer = styled.div`
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-
+export const numsContainer = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  width: 360px;
-  height: 10px;
-  
-  > div{
-    width: 16px;
-    height: 16px;
-    box-sizing: border-box;
-    border-radius: 35px;
+  width: 100%;
+  height: 52px;
+  >img {
+    width: 52px;
+    height: 52px;
   }
-`;
-
-export const testDot = styled.div`
-  border: 10px solid #df843e;
-  margin-left: -16px;
-`;
-
-export const testDot2 = styled.div`
-  margin-left: -11px;
-  border: 10px solid #df843e;
-  display: ${(props) => (props.count === 2 ? "visible" : "none")};
-`;
-
-export const testDot2_2 = styled.div`
-  margin-left: -11px;
-  border: 10px solid #eee;
-  display: ${(props) => (props.count === 2 ? "none" : "visible")};
-
-`;
-
-export const testDot3 = styled.div`
-  border: 10px solid #eee;
-  margin-left: -16px;
-  display: ${(props) => (props.count === 2 ? "hidden" : "visible")};
-  transition: display 0.5s;
-`;
-
-
-
-export const ProgressContainer = styled.div`
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-
-  margin: 50px auto;
-  background-color: #eee;
-  width: 360px;
-  height: 10px;
+` 
+export const numsCount = styled.div`
   display: flex;
   align-items: center;
-  border-radius: 20px;
-`;
-
-export const Progress = styled.div`
-  background-color: #df843e;
-  width: ${(props) => props.width};
+  justify-content: center;
+  width: 244px;
   height: 100%;
-  transition: width 0.5s;
-  border-radius: 20px;
-  border: #df843e;
-`;
+  border: 1px solid #DF843E;
+  border-radius: 30px;
+`
 
-export const Dot = styled.div`
-  width: 16px;
-  height: 16px;
-  box-sizing: border-box;
-  border: 10px solid #df843e;
-  border-radius: 35px;
-  margin-left: -16px;
-`;
+export const btnAddCart = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 30px;
+  background-color: #FFD64F;
+`
+
+export const btnCancel = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  width: 100%;
+  height: 52px;
+  border: 1px solid #12121270;
+  border-radius: 30px;
+`

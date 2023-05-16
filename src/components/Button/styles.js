@@ -15,11 +15,9 @@ export const WhiteRoundedButton = styled.div`
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     &:hover {
-    background-color: #f6f6f6;
+      background-color: #f6f6f6;
     }
   }
-
-
 `;
 
 export const GrayRoundedButton = styled.div`
@@ -45,9 +43,35 @@ export const WhiteFlatRoundedButton = styled.div`
   border-radius: 30px;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
   border: 1px solid #f6f6f6;
-  > p{
+  > div {
     margin: 0;
     font-weight: 700;
     font-size: 4px;
   }
-`
+`;
+
+export const WhiteRoundedLargeButton = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  background: #ffffff;
+  border-radius: 10px;
+  border: 0.5px solid #f1f1f5;
+  margin: 16px;
+`;
+
+export const WhiteRoundedSmallButton = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  background: #ffffff;
+  border-radius: 10px;
+  border: 0.5px solid #f1f1f5;
+  > div{
+    text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+  }
+`;
