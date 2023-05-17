@@ -5,7 +5,7 @@ import { ContentFontMiddle } from "../style/font";
 function SideCategory(props) {
   return (
     <style.SideCategory onClick={props.onClick} active={props.active}>
-      <img src={props.imgSrc} alt="sideImg"/>
+      <style.SideImg src={props.imgSrc} alt="sideImg"/>
       <ContentFontMiddle>
         {props.sideMenu}
       </ContentFontMiddle>

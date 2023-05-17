@@ -1,7 +1,9 @@
 import React from "react";
-import SideCategory from "../../components/SideCategory/SideCategory";
+import SideCategory from "./SideCategory";
+import Logo from "../Common/Logo";
 import { useState } from "react";
 import * as style from "./styles";
+
 
 export default function Sidebar(props) {
   const sideSelectors = {
@@ -46,12 +48,8 @@ export default function Sidebar(props) {
 
   return (
     <style.Sidebar>
-      <img
-        className="logoImg"
-        alt="로고 이미지"
-        src={process.env.PUBLIC_URL + "/Images/Main/Logo.svg"}
-      />
-      <>
+      <Logo/>
+      <style.Categorys>
         {sideSelectors.data.map((item) => {
           return (
             <SideCategory
@@ -66,7 +64,7 @@ export default function Sidebar(props) {
             />
           );
         })}
-      </>
+      </style.Categorys>
     </style.Sidebar>
   );
 }

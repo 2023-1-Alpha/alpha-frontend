@@ -1,13 +1,12 @@
 import React from "react";
 import * as style from "./styles";
 import { ContentFontLarge } from "../../components/style/font";
+import Logo from "../../components/Common/Logo";
 
 export default function DetailHeader(props) {
   return (
     <style.DetailHeader>
-      <style.Logo>
-        <img src={process.env.PUBLIC_URL + "/Images/Main/Logo.svg"} />
-      </style.Logo>
+      <Logo/>
       {props.count <= 2 && <style.Container>
         <style.ProgressInfoContainer>
           <ContentFontLarge

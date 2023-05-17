@@ -2,10 +2,11 @@ import React from "react";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import * as style from "./styles";
-import Sidebar from "../Sidebar/Sidebar";
-import MenuHeader from "../MenuHeader/MenuHeader";
-import MenuList from "../MenuList/MenuList";
-import MenuFooter from "../MenuFooter/MenuFooter";
+import Sidebar from "../../components/Menu/Sidebar";
+import MenuHeader from "../../components/Menu/MenuHeader";
+import MenuList from "../../components/Menu/MenuList";
+import MenuFooter from "../../components/Menu/MenuFooter";
+import { SubTitleFont } from "../../components/style/font";
 
 export default function SelectMenu() {
   const [menuType, setMenuType] = useState(1);
@@ -25,9 +26,9 @@ export default function SelectMenu() {
     <style.Wrap>
       <Sidebar menuType={menuType} getMenutype={getMenutype} />
       <style.Menu>
-        <p style={{ fontWeight: "700", fontSize: "24px", color: "#000000" }}>
+        <SubTitleFont>
           {menuTypeName}
-        </p>
+        </SubTitleFont>
         <MenuHeader menuType={menuType} />
         <MenuList menuType={menuType} />
         <MenuFooter />
