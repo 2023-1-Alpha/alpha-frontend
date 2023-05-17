@@ -12,16 +12,12 @@ export default function Main() {
 
   return (
     <style.Wrap>
-      <style.LogoBlock>
-        <img
+      <style.LogoBlock
           className="logoImg"
           alt="로고 이미지"
           src={process.env.PUBLIC_URL + "/Images/Main/Logo.svg"}
-        />
-      </style.LogoBlock>
-        <SubTitleFont>
-          식사 장소를 선택해주세요
-        </SubTitleFont>
+          />
+        <SubTitleFont>식사 장소를 선택해주세요</SubTitleFont>
       <style.SpaceBlock>
           <WhiteRoundedButton
             imgSrc={process.env.PUBLIC_URL + "/Images/Main/ForHere.svg"}

@@ -7,6 +7,7 @@ export default function DetailSize(props) {
     props.add_count();
   }
   return(
+    // 추후에 map으로 데이터 뿌리기
     <style.DetailSize>
       <WhiteRoundedLargeButton
         imgSrc={props.menuImg}

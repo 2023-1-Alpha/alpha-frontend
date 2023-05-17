@@ -7,6 +7,9 @@ import DetailSide from "../DetailSide/DetailSide";
 import DetailDrink from "../DetailDrink/DetailDrink";
 import DetailFinal from "../DetailFinal/DetailFinal";
 import { ContentFontLarge } from "../../components/style/font";
+import Quantity from "../../components/Common/Quantity";
+import YellowButton from "../../components/Button/YellowButton";
+import GrayBorderButton from "../../components/Button/GrayBorderButton";
 
 export default function SelectDetail() {
   const [count, setCount] = useState(0);
@@ -15,17 +18,7 @@ export default function SelectDetail() {
   function getCount() {
     setCount(count);
   }
-  function getNums() {
-    setNums(nums);
-  }
-  function addNums() {
-    setNums(nums + 1);
-  }
-  function subNums() {
-    if (nums >= 2) {
-      setNums(nums - 1);
-    }
-  }
+
   function add_count() {
     if (count === 3) {
       setCount(0);
@@ -33,6 +26,7 @@ export default function SelectDetail() {
       setCount(count + 1);
     }
   }
+
   function reset() {
     setCount(0);
     // 페이지 이동
@@ -93,38 +87,15 @@ export default function SelectDetail() {
           menuSetPrice={menuSetPrice}
           menuSetImg={menuSetImg}
           add_count={add_count}
-          getNums={getNums}
-          addNums={addNums}
-          subNums={subNums}
         />
       )}
-      <style.btnContainer>
-        {count === 3 && (<style.countAndCart>
-        <style.numsContainer>
-            <img src={process.env.PUBLIC_URL + "/Images/Main/BtnSub.svg"} 
-              onClick={subNums}
-            />
-            <style.numsCount>
-              <ContentFontLarge style={{ color: "#DF843E" }}>
-                {nums}
-              </ContentFontLarge>
-            </style.numsCount>
-            <img src={process.env.PUBLIC_URL + "/Images/Main/BtnAdd.svg"} 
-              onClick={addNums}
-            />
-          </style.numsContainer>
-          <style.btnAddCart>
-            <ContentFontLarge style={{ color: "#12121270" }}>
-              장바구니 추가
-            </ContentFontLarge>
-          </style.btnAddCart>
-        </style.countAndCart>)}
-        <style.btnCancel onClick={reset}>
-          <ContentFontLarge style={{ color: "#12121270" }}>
-            취소
-          </ContentFontLarge>
-        </style.btnCancel>
-      </style.btnContainer>
+        {count === 3 && (
+        <style.countAndCart>
+          <Quantity nums={nums} setNums={setNums}/>
+          <YellowButton name={"장바구니 추가"}/>
+        </style.countAndCart>
+        )}
+      <GrayBorderButton name={"취소"} onClick={reset}/>
     </style.SelectDetail>
   );
 }

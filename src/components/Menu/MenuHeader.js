@@ -1,5 +1,5 @@
 import React from "react";
-import WhiteFlatRoundedButton from "../../components/Button/WhiteFlatRoundedButton";
+import WhiteFlatRoundedButton from "../Button/WhiteFlatRoundedButton";
 import * as style from "./styles";
 
 export default function MenuHeader(props) {
@@ -48,13 +48,11 @@ export default function MenuHeader(props) {
   return (
     <style.MenuHeader>
       {props.menuType === 1 &&
-        burgersHeader.data.map((item) => {
-          return <WhiteFlatRoundedButton name={item.title} />;
-        })}
+        burgersHeader.data.map((item) => <WhiteFlatRoundedButton name={item.title} />
+        )}
       {props.menuType === 2 &&
-        dessertHeader.data.map((item) => {
-          return <WhiteFlatRoundedButton name={item.title} />;
-        })}
+        dessertHeader.data.map((item) =>  <WhiteFlatRoundedButton name={item.title} />
+        )}
     </style.MenuHeader>
   );
 }

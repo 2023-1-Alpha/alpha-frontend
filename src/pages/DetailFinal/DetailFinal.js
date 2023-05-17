@@ -3,9 +3,7 @@ import * as style from "./styles";
 import WhiteRoundedLargeButton from "../../components/Button/WhiteRoundedLargeButton";
 import { SubTitleFont } from "../../components/style/font";
 export default function DetailFinal(props) {
-  function onClick() {
-    props.add_count();
-  }
+
   return(
     <style.DetailFinal>
       <SubTitleFont>
@@ -19,7 +17,6 @@ export default function DetailFinal(props) {
       </SubTitleFont>
       <img
         src={props.menuSetImg}
-        onClick={onClick}
       />
     </style.DetailFinal>
   )
