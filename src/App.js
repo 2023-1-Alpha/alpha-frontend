@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import SelectMenu from "./pages/SelectMenu/SelectMenu";
 import SelectDetail from "./pages/SelectDetail/SelectDetail";
+import WebcamPreview from "./pages/WebcamPreview";
 
 import { GlobalStyle } from "./global";
 
