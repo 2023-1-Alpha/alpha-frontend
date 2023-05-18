@@ -7,6 +7,7 @@ export default function DetailSide(props) {
   }
 
   return (
+    // 추후에 map으로 데이터 뿌리기
     <style.DetailSide>
       <WhiteRoundedSmallButton
         imgSrc={props.menuImg}

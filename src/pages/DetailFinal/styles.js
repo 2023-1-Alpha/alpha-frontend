@@ -2,9 +2,11 @@ import styled from 'styled-components';
 
 export const DetailFinal = styled.div`
   width: 100%;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex:1;
   
   > hr{
     width: 100px;
