@@ -1,5 +1,17 @@
 import styled from "styled-components";
 
+export const btnCancel = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 364px;
+  height: 52px;
+  border: 1px solid #12121270;
+  border-radius: 30px;
+`;
+
+// DetailHeader
+
 export const DetailHeader = styled.div`
   display: flex;
   width: 100%;
@@ -10,7 +22,7 @@ export const DetailHeader = styled.div`
 export const Container = styled.div`
   height: 160px;
   position: relative;
-`
+`;
 
 export const Logo = styled.div`
   display: flex;
@@ -33,7 +45,7 @@ export const ProgressInfoContainer = styled.div`
   align-items: center;
   width: 400px;
   height: 10px;
-`
+`;
 
 export const ProgressDotContainer = styled.div`
   position: absolute;
@@ -48,7 +60,7 @@ export const ProgressDotContainer = styled.div`
   width: 320px;
   height: 10px;
 
-  > div{
+  > div {
     width: 16px;
     height: 16px;
     box-sizing: border-box;
@@ -77,11 +89,8 @@ export const backDot2_2 = styled.div`
 export const backDot3 = styled.div`
   border: 10px solid #eee;
   margin-left: -16px;
-  display: ${(props) => (props.count === 2 ? "hidden" : "visible")};
   transition: display 0.5s;
 `;
-
-
 
 export const ProgressContainer = styled.div`
   position: absolute;
@@ -114,4 +123,62 @@ export const Dot = styled.div`
   border: 10px solid #df843e;
   border-radius: 35px;
   margin-left: -16px;
+`;
+
+// DetailSize
+
+export const DetailSize = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex: 1;
+`;
+
+// DetailSide
+export const DetailSide = styled.div`
+  width: 455px;
+  overflow-y: scroll;
+  flex: 1;
+`;
+
+export const DetailSideInnerDiv = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%, auto));
+  gap: 10px 10px;
+`;
+
+// DetailDrink
+
+export const DetailDrink = styled.div`
+  width: 455px;
+  overflow-y: scroll;
+  flex: 1;
+`;
+export const DetailDrinkInnerDiv = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%, auto));
+  gap: 10px 10px;
+`;
+// DetailFinal
+
+export const DetailFinal = styled.div`
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+
+  > hr {
+    width: 100px;
+    border: 2px solid #df843e;
+    margin-bottom: 16px;
+  }
+  > img {
+    width: 240px;
+    height: 240px;
+    margin-top: 40px;
+  }
 `;
