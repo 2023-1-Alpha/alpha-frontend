@@ -1,12 +1,11 @@
 import React from "react";
 import * as style from "./styles";
 import { useState } from "react";
-import DetailHeader from "../DetailHeader/DetailHeader";
-import DetailSize from "../DetailSize/DetailSize";
-import DetailSide from "../DetailSide/DetailSide";
-import DetailDrink from "../DetailDrink/DetailDrink";
-import DetailFinal from "../DetailFinal/DetailFinal";
-import { ContentFontLarge } from "../../components/style/font";
+import DetailHeader from "../../components/Detail/DetailHeader";
+import DetailSize from "../../components/Detail/DetailSize";
+import DetailSide from "../../components/Detail/DetailSide";
+import DetailDrink from "../../components/Detail/DetailDrink";
+import DetailFinal from "../../components/Detail/DetailFinal";
 import Quantity from "../../components/Common/Quantity";
 import YellowButton from "../../components/Button/YellowButton";
 import GrayBorderButton from "../../components/Button/GrayBorderButton";

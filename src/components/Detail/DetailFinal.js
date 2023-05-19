@@ -1,6 +1,5 @@
 import React from "react";
 import * as style from "./styles";
-import WhiteRoundedLargeButton from "../../components/Button/WhiteRoundedLargeButton";
 import { SubTitleFont } from "../../components/style/font";
 export default function DetailFinal(props) {
 
