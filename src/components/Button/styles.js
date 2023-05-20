@@ -4,13 +4,10 @@ export const WhiteRoundedButton = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 120px;
+  width: 140px;
   background: #ffffff;
-  margin: 20px;
   > img {
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
+    border-radius: 30px;
     padding: 30px;
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
