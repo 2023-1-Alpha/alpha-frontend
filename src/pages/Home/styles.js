@@ -16,6 +16,7 @@ export const LogoBlock = styled.img`
 export const SpaceBlock = styled.div`
   display: flex;
   justify-content: center;
+  gap: 65px;
   margin: 50px;
 `;
 

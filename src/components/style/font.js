@@ -18,6 +18,12 @@ export const SubTitleFontWhite = styled.div`
     color: #F6F6F6;
 `;
 
+export const SubTitleFontColor = styled.div`
+    font-family: 'IBMPlexSansBold';
+    font-size: 24px;
+    color: #DF843E;
+`;
+
 export const ContentFontLarge = styled.div`
     font-family: 'IBMPlexSansSemiBold';
     font-size: 16px;

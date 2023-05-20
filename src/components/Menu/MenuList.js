@@ -154,6 +154,7 @@ export default function MenuList(props) {
                       imgSrc={item.imgSrc}
                       menu={item.name}
                       price={item.price}
+                      onClick={props.openModal}
                     />
                 )}
             {props.menuType === 1 && 
@@ -162,6 +163,7 @@ export default function MenuList(props) {
                       imgSrc={item.imgSrc}
                       menu={item.name}
                       price={item.price}
+                      onClick={props.openModal}
                     />
                 )}
         </style.MenuGrid>
