@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const SelectDetail = styled.div`
   height: calc(100vh - 74px);
@@ -18,7 +18,7 @@ export const btnContainer = styled.div`
   width: 364px;
   height: 200px;
   border-radius: 30px;
-`
+`;
 export const countAndCart = styled.div`
   display: flex;
   flex-direction: column;

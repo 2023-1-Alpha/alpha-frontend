@@ -11,7 +11,7 @@ const Text = styled(ContentFontLarge)`
 function WhiteRoundedLargeButton(props) {
   return (
     <style.WhiteRoundedLargeButton onClick={props.onClick}>
-      <img src={props.imgSrc} alt="selectSpace" />
+      <img src={props.imgSrc} />
       <Text>{props.text}</Text>
       <ContentFontLarge>￦{props.price}</ContentFontLarge>
     </style.WhiteRoundedLargeButton>
