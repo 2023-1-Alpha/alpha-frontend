@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const btnCancel = styled.div`
   display: flex;
@@ -71,19 +71,19 @@ export const ProgressDotContainer = styled.div`
 export const backDot = styled.div`
   border: 10px solid #df843e;
   margin-left: -16px;
-  display: ${(props) => (props.count === 0 ? "hidden" : "visible")};
+  display: ${(props) => (props.count === 0 ? 'hidden' : 'visible')};
 `;
 
 export const backDot2 = styled.div`
   margin-left: -11px;
   border: 10px solid #df843e;
-  display: ${(props) => (props.count === 2 ? "visible" : "none")};
+  display: ${(props) => (props.count === 2 ? 'visible' : 'none')};
 `;
 
 export const backDot2_2 = styled.div`
   margin-left: -11px;
   border: 10px solid #eee;
-  display: ${(props) => (props.count === 2 ? "none" : "visible")};
+  display: ${(props) => (props.count === 2 ? 'none' : 'visible')};
 `;
 
 export const backDot3 = styled.div`

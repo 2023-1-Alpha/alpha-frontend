@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const SideCategory = styled.div`
   display: flex;
@@ -7,13 +7,12 @@ export const SideCategory = styled.div`
   height: 60px;
   background: #ffffff;
   border: none;
-  
+
   &:hover {
     background-color: #f6f6f6;
   }
 
-  background: ${(props) => props.active ? '#f6f6f6' : 'none'};
-
+  background: ${(props) => (props.active ? '#f6f6f6' : 'none')};
 `;
 
 export const SideImg = styled.img`
