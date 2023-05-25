@@ -7685,6 +7685,7 @@ react-modal@^3.16.1:
     warning "^4.0.3"
 
 react-refresh@^0.11.0, "react-refresh@>=0.10.0 <1.0.0":
+
   version "0.11.0"
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.11.0.tgz"
   integrity sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==
