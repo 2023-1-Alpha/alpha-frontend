@@ -68,6 +68,8 @@ function App() {
           />
           <Route exact path="/seniorSelectSide" Component={SelectSide} />
           <Route exact path="/seniorSelectDessert" Component={SelectDessert} />
+                      <Route exact path="/WebcamPreview" Component={WebcamPreview} />
+
         </Routes>
       </Container>
     </>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Order from './Order';
 import { TitleFont } from '../../components/style/font';
@@ -24,13 +24,35 @@ const OrdersContainer = styled.div`
 `;
 
 export default function Orders() {
+  const ds = {
+    order: [
+      {
+        id: 1,
+        name: '치킨 크리스피 버거',
+        price: '6200',
+      },
+      {
+        id: 2,
+        name: '치킨 크리스피 버거',
+        price: '6200',
+      },
+      {
+        id: 3,
+        name: '치킨 크리스피 버거',
+        price: '6200',
+      },
+    ],
+  };
+
+  const [orders, setOrders] = useState(ds.order);
+
   return (
     <Container>
       <TitleFont>주문</TitleFont>
       <OrdersContainer>
-        <Order name={'치킨 크리스피 버거'} price={'₩6200'} nums={'1'} />
-        <Order name={'치킨 크리스피 버거'} price={'₩6200'} nums={'1'} />
-        <Order name={'치킨 크리스피 버거'} price={'₩6200'} nums={'1'} />
+        {orders.map((data) => (
+          <Order name={data.name} price={data.price} />
+        ))}
       </OrdersContainer>
     </Container>
   );
