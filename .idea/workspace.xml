@@ -5,21 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccff38ad-14d1-4411-9313-f6397bc874c5" name="Changes" comment="Update Payment.js">
-      <change afterPath="$PROJECT_DIR$/public/images/Main/AddCart.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Pay/PaymentProcess.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/SelectDetail/AddCart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/WhiteBorderButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/WhiteBorderButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/WhiteRoundedButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/WhiteRoundedButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/YellowButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/YellowButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Detail/DetailSize.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Detail/DetailSize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu/Modal/SetModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/Modal/SetModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pay/SelectPayment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pay/SelectPayment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pay/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pay/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SelectDetail/SelectDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SelectDetail/SelectDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SelectDetail/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SelectDetail/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/senior/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/senior/Home.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
