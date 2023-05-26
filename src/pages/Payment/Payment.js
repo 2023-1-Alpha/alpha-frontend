@@ -4,7 +4,9 @@ import * as style from './styles';
 import { useState } from 'react';
 import GrayBorderButton from '../../components/Button/GrayBorderButton';
 import SelectPayment from '../../components/Pay/SelectPayment';
-import PaymentProcess from '../../components/Pay/PaymentProcess';
+import CardPayment from '../../components/Pay/CardPayment';
+import GiftPayment from '../../components/Pay/GiftPayment';
+
 import CompletePayment from '../../components/Pay/CompletePayment';
 import {
   ContentFontLargeGray,
@@ -31,6 +33,15 @@ export default function Payment() {
       setCount(count + 1);
     }
   }
+  function setPay(selectedPay) {
+    if (selectedPay === 'Credit') {
+      setSelectedPay('Credit');
+    } else {
+      setSelectedPay('GiftCard');
+    }
+    console.log(selectedPay);
+  }
+
   function reset() {
     setCount(0);
     // 페이지 이동
@@ -38,9 +49,16 @@ export default function Payment() {
 
   return (
     <style.Payment count={count}>
-      {count === 0 && <SelectPayment add_count={add_count} />}
-      {count === 1 && <PaymentProcess add_count={add_count} />}
+      {count === 0 && <SelectPayment add_count={add_count} setPay={setPay} />}
+      {count === 1 && selectedPay === 'Credit' && (
+        <CardPayment add_count={add_count} />
+      )}
+      {count === 1 && selectedPay === 'GiftCard' && (
+        <GiftPayment add_count={add_count} />
+      )}
+
       {count === 2 && <CompletePayment />}
+
       {count <= 1 ? (
         <GrayBorderButton name={'취소'} onClick={reset} />
       ) : (

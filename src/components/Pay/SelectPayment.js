@@ -14,6 +14,7 @@ export default function SelectPayment(props) {
           small={false}
           onClick={() => {
             props.add_count();
+            props.setPay('Credit');
           }}
         />
         <WhiteRoundedButton
@@ -22,6 +23,7 @@ export default function SelectPayment(props) {
           small={false}
           onClick={() => {
             props.add_count();
+            props.setPay('GiftCard');
           }}
         />
       </style.BtnContainer>

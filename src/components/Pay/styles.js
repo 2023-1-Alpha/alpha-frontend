@@ -15,7 +15,7 @@ export const BtnContainer = styled.div`
   margin-top: 210px;
   justify-content: center;
 `;
-export const PaymentProcess = styled.div`
+export const CardPayment = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -40,4 +40,12 @@ export const CompletePayment = styled.div`
     width: 200px;
     margin-top: 140px;
   }
+`;
+
+export const GiftPayment = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
 `;

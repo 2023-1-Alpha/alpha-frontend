@@ -35,9 +35,9 @@ const ArrowImg = styled.img`
   margin-top: 46px;
 `;
 
-export default function PaymentProcess(props) {
+export default function CardPayment(props) {
   return (
-    <style.PaymentProcess>
+    <style.CardPayment>
       <TitleFont>결제를 진행해주세요</TitleFont>
       <style.Container>
         <RoundedContainer>
@@ -57,6 +57,6 @@ export default function PaymentProcess(props) {
         />
         <ArrowImg src={'Images/Main/Uparrow.svg'} />
       </style.Container>
-    </style.PaymentProcess>
+    </style.CardPayment>
   );
 }
