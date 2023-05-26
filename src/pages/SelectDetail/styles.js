@@ -25,3 +25,17 @@ export const countAndCart = styled.div`
   gap: 26px;
   margin-bottom: 26px;
 `;
+
+export const AddCart = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  > img {
+    width: 150px;
+    height: 120px;
+    margin-top: 380px;
+  }
+  > div {
+    margin-top: 66px;
+  }
+`;
