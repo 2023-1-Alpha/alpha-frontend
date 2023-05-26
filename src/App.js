@@ -4,6 +4,7 @@ import Home from './pages/Home/Home';
 import SelectMenu from './pages/SelectMenu/SelectMenu';
 import SelectDetail from './pages/SelectDetail/SelectDetail';
 import WebcamPreview from './pages/WebcamPreview';
+
 import SeniorMain from './pages/senior/Home';
 import SeniorPayment from './pages/senior/Payment';
 import SeniorBurgerOrSide from './pages/senior/BurgerOrSide';
