@@ -8,6 +8,8 @@ import {
 } from '../Button/SeniorButton';
 
 const Container = styled.div`
+  height: calc(100vh - 74px);
+
   padding-top: 38px;
   display: flex;
   flex-direction: column;
@@ -23,6 +25,7 @@ const LogoBlock = styled.img`
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
+  flex: 1;
   gap: 16px;
   margin-bottom: 66px;
 `;

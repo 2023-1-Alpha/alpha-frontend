@@ -28,6 +28,7 @@ import OrderSheet from './pages/OrderSheet/OrderSheet';
 import SeniorSetOrNot from './pages/senior/SetOrNot';
 import SelectDrink from './pages/senior/SelectDrink';
 import CompletePayment from './pages/CompletePayment';
+import RealHome from './pages/RealHome';
 
 const Container = styled.div`
   max-width: 545px;

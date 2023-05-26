@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { SeniorBigButton, SeniorGoToHomeButton } from '../Button/SeniorButton';
 
 const Container = styled.div`
+  height: calc(100vh - 74px);
   padding-top: 38px;
   display: flex;
   flex-direction: column;
@@ -20,6 +21,7 @@ const LogoBlock = styled.img`
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
+  flex: 1;
   gap: 21px;
   margin-bottom: 43px;
   padding: 0px 12px;

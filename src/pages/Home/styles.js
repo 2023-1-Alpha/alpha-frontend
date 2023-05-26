@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Wrap = styled.div`
   padding-top: 60px;
@@ -19,7 +19,3 @@ export const SpaceBlock = styled.div`
   gap: 65px;
   margin: 50px;
 `;
-
-export const Link = styled.link`
-  text-decoration-line:none;
-`
