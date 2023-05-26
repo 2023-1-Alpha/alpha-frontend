@@ -6,10 +6,10 @@ import DetailSize from '../../components/Detail/DetailSize';
 import DetailSide from '../../components/Detail/DetailSide';
 import DetailDrink from '../../components/Detail/DetailDrink';
 import DetailFinal from '../../components/Detail/DetailFinal';
+import AddCart from './AddCart';
 import Quantity from '../../components/Common/Quantity';
 import YellowButton from '../../components/Button/YellowButton';
 import GrayBorderButton from '../../components/Button/GrayBorderButton';
-
 export default function SelectDetail() {
   const [count, setCount] = useState(0);
   const [nums, setNums] = useState(1);
@@ -19,7 +19,7 @@ export default function SelectDetail() {
   }
 
   function add_count() {
-    if (count === 3) {
+    if (count === 4) {
       setCount(0);
     } else {
       setCount(count + 1);
@@ -40,61 +40,74 @@ export default function SelectDetail() {
   const menuSetImg = process.env.PUBLIC_URL + '/Images/Main/BurgerSet1.svg';
 
   return (
-    <style.SelectDetail>
-      <DetailHeader count={count} getCount={getCount} add_count={add_count} />
-      {count === 0 && (
-        <DetailSize
-          menuName={menuName}
-          menuPrice={menuPrice}
-          menuImg={menuImg}
-          menuSetName={menuSetName}
-          menuSetPrice={menuSetPrice}
-          menuSetImg={menuSetImg}
-          add_count={add_count}
-        />
-      )}
-      {count === 1 && (
-        <DetailSide
-          menuName={menuName}
-          menuPrice={menuPrice}
-          menuImg={menuImg}
-          menuSetName={menuSetName}
-          menuSetPrice={menuSetPrice}
-          menuSetImg={menuSetImg}
-          add_count={add_count}
-        />
-      )}
+    <>
+      {count < 4 ? (
+        <style.SelectDetail>
+          <DetailHeader
+            count={count}
+            getCount={getCount}
+            add_count={add_count}
+          />
+          {count === 0 && (
+            <DetailSize
+              menuName={menuName}
+              menuPrice={menuPrice}
+              menuImg={menuImg}
+              menuSetName={menuSetName}
+              menuSetPrice={menuSetPrice}
+              menuSetImg={menuSetImg}
+              add_count={add_count}
+            />
+          )}
+          {count === 1 && (
+            <DetailSide
+              menuName={menuName}
+              menuPrice={menuPrice}
+              menuImg={menuImg}
+              menuSetName={menuSetName}
+              menuSetPrice={menuSetPrice}
+              menuSetImg={menuSetImg}
+              add_count={add_count}
+            />
+          )}
 
-      {count === 2 && (
-        <DetailDrink
-          menuName={menuName}
-          menuPrice={menuPrice}
-          menuImg={menuImg}
-          menuSetName={menuSetName}
-          menuSetPrice={menuSetPrice}
-          menuSetImg={menuSetImg}
-          add_count={add_count}
-        />
-      )}
+          {count === 2 && (
+            <DetailDrink
+              menuName={menuName}
+              menuPrice={menuPrice}
+              menuImg={menuImg}
+              menuSetName={menuSetName}
+              menuSetPrice={menuSetPrice}
+              menuSetImg={menuSetImg}
+              add_count={add_count}
+            />
+          )}
 
-      {count === 3 && (
-        <DetailFinal
-          menuName={menuName}
-          menuPrice={menuPrice}
-          menuImg={menuImg}
-          menuSetName={menuSetName}
-          menuSetPrice={menuSetPrice}
-          menuSetImg={menuSetImg}
-          add_count={add_count}
-        />
+          {count === 3 && (
+            <DetailFinal
+              menuName={menuName}
+              menuPrice={menuPrice}
+              menuImg={menuImg}
+              menuSetName={menuSetName}
+              menuSetPrice={menuSetPrice}
+              menuSetImg={menuSetImg}
+              add_count={add_count}
+            />
+          )}
+          {count === 3 && (
+            <style.countAndCart>
+              <Quantity nums={nums} setNums={setNums} />
+              <YellowButton
+                name={'장바구니 추가'}
+                onClick={() => add_count()}
+              />
+            </style.countAndCart>
+          )}
+          <GrayBorderButton name={'취소'} onClick={() => reset()} />
+        </style.SelectDetail>
+      ) : (
+        <AddCart />
       )}
-      {count === 3 && (
-        <style.countAndCart>
-          <Quantity nums={nums} setNums={setNums} />
-          <YellowButton name={'장바구니 추가'} />
-        </style.countAndCart>
-      )}
-      <GrayBorderButton name={'취소'} onClick={reset} />
-    </style.SelectDetail>
+    </>
   );
 }

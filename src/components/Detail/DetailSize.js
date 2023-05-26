@@ -1,12 +1,12 @@
-import React from "react";
-import * as style from "./styles";
-import WhiteRoundedLargeButton from "../../components/Button/WhiteRoundedLargeButton";
+import React from 'react';
+import * as style from './styles';
+import WhiteRoundedLargeButton from '../../components/Button/WhiteRoundedLargeButton';
 
 export default function DetailSize(props) {
   function onClick() {
     props.add_count();
   }
-  return(
+  return (
     // 추후에 map으로 데이터 뿌리기
     <style.DetailSize>
       <WhiteRoundedLargeButton
@@ -22,5 +22,5 @@ export default function DetailSize(props) {
         onClick={onClick}
       />
     </style.DetailSize>
-  )
+  );
 }

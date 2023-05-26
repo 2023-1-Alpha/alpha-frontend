@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home/Home";
-import SelectMenu from "./pages/SelectMenu/SelectMenu";
-import SelectDetail from "./pages/SelectDetail/SelectDetail";
-import WebcamPreview from "./pages/WebcamPreview";
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import SelectMenu from './pages/SelectMenu/SelectMenu';
+import SelectDetail from './pages/SelectDetail/SelectDetail';
+import WebcamPreview from './pages/WebcamPreview';
 
-import { GlobalStyle } from "./global";
+import { GlobalStyle } from './global';
 import Payment from './pages/Payment/Payment';
 import OrderSheet from './pages/OrderSheet/OrderSheet';
 
@@ -19,7 +19,7 @@ const Container = styled.div`
 function App() {
   return (
     <>
-      <GlobalStyle/>
+      <GlobalStyle />
       <Container>
         <Routes>
           <Route exact path="/" Component={Home} />
