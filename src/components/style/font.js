@@ -59,3 +59,15 @@ export const ContentFontSmall = styled.div`
   font-size: 10px;
   color: #121212;
 `;
+
+export const SeniorTitleFont = styled.div`
+  font-family: 'IBMPlexSansSemiBold';
+  font-size: 50px;
+  color: #121212;
+`;
+
+export const SeniorContentFont = styled.div`
+  font-family: 'IBMPlexSansSemiBold';
+  font-size: 30px;
+  color: #121212;
+`;
