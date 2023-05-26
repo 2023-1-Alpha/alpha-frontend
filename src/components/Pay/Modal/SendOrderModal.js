@@ -32,11 +32,14 @@ export default function SendOrderModal(props) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    setTimeout(() => {
-      navigate('/');
+    const timer = setTimeout(() => {
+      // 실행할 함수
+      navigate('/seniorHome');
     }, 5000);
+    return () => {
+      clearTimeout(timer);
+    };
   }, []);
-
   return (
     <Modal
       isOpen={props.modalIsOpen}

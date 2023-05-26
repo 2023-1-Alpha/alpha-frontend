@@ -34,7 +34,7 @@ export default function SeniorPayment() {
   useEffect(() => {
     setTimeout(() => {
       setIsopen(true);
-    }, 3000);
+    }, 2000);
   }, []);
 
   return (
