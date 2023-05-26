@@ -4,7 +4,7 @@ import { ContentFontLargeGray } from '../style/font';
 
 export default function YellowButton(props) {
   return (
-    <style.YellowButton mini={props.mini} onClick={props.onClick}>
+    <style.YellowButton onClick={props.onClick}>
       <ContentFontLargeGray>{props.name}</ContentFontLargeGray>
     </style.YellowButton>
   );
