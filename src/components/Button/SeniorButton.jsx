@@ -30,7 +30,7 @@ const SmallButton = styled.button`
   color: #ffffff;
 `;
 
-const GoBackHomeButton = styled.button`
+export const GoBackHomeButton = styled.button`
   background: #df843e;
   border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0px 14px 22px -10px rgba(0, 0, 0, 0.05);

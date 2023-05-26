@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccff38ad-14d1-4411-9313-f6397bc874c5" name="Changes" comment="Update Payment.js">
+    <list default="true" id="ccff38ad-14d1-4411-9313-f6397bc874c5" name="Changes" comment="Add PattyDetail.js">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/senior/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/senior/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/SeniorButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/SeniorButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/WhiteRoundedLargeButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/WhiteRoundedLargeButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Detail/DetailSize.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Detail/DetailSize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/style/font.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/style/font.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/senior/PattyDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/senior/PattyDetail.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +62,7 @@
       <updated>1684999569104</updated>
       <workItem from="1684999570950" duration="17261000" />
       <workItem from="1685027338560" duration="2206000" />
+      <workItem from="1685105101772" duration="1435000" />
     </task>
     <task id="LOCAL-00001" summary="Update Payment.js">
       <created>1685029425232</created>
@@ -67,7 +71,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685029425232</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add PattyDetail.js">
+      <created>1685105236083</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685105236083</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -75,6 +86,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update Payment.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Payment.js" />
+    <MESSAGE value="Add PattyDetail.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add PattyDetail.js" />
   </component>
 </project>

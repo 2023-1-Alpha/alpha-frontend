@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import React, { useState } from 'react';
 import WhiteRoundedLargeButton from '../../components/Button/WhiteRoundedLargeButton';
-import GrayRoundedButton from '../../components/Button/GrayRoundedButton';
+import { TitleFontWhite } from '../../components/style/font';
+import { GoBackHomeButton } from '../../components/Button/SeniorButton';
 
 const Container = styled.div`
   height: calc(100vh - 74px);
@@ -10,11 +11,16 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
 `;
-const ButtonContainer = styled.div`
+const InnerContainer = styled.div`
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex: 1;
+`;
+const ButtonContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 100px);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px 20px;
 `;
 
@@ -57,13 +63,21 @@ export default function PattyDetail(props) {
   return (
     <Container>
       <LogoImg src={'Images/Main/Logo.svg'} />
-      {ds.data.map((item) => (
-        <WhiteRoundedLargeButton
-          imgSrc={item.imgSrc}
-          menu={item.name}
-          price={item.price}
-        />
-      ))}
+      <InnerContainer>
+        <ButtonContainer>
+          {ds.data.map((item) => (
+            <WhiteRoundedLargeButton
+              senior={true}
+              imgSrc={item.imgSrc}
+              text={item.name}
+              price={item.price}
+            />
+          ))}
+        </ButtonContainer>
+      </InnerContainer>
+      <GoBackHomeButton>
+        <TitleFontWhite>처음부터 다시 주문하기</TitleFontWhite>
+      </GoBackHomeButton>
     </Container>
   );
 }

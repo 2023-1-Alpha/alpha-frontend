@@ -5,6 +5,11 @@ export const TitleFont = styled.div`
   font-size: 32px;
   color: #121212;
 `;
+export const TitleFontWhite = styled.div`
+  font-family: 'IBMPlexSansBold';
+  font-size: 32px;
+  color: #f6f6f6;
+`;
 
 export const SubTitleFont = styled.div`
   font-family: 'IBMPlexSansBold';
