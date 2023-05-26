@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const WhiteRoundedButton = styled.div`
   display: flex;
@@ -7,9 +7,12 @@ export const WhiteRoundedButton = styled.div`
   width: 140px;
   background: #ffffff;
   > img {
-    border-radius: 30px;
+    width: ${(props) => (props.small ? '60px' : '88px')};
+    height: ${(props) => (props.small ? '60px' : '88px')};
+    border-radius: 20px;
     padding: 30px;
-    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(18, 18, 18, 0.05);
+    box-shadow: 0px 4px 22px 6px rgba(0, 0, 0, 0.05);
     margin-bottom: 20px;
     &:hover {
       background-color: #f6f6f6;
@@ -57,11 +60,11 @@ export const WhiteRoundedLargeButton = styled.div`
   width: 220px;
   height: 276px;
   padding-bottom: 24px;
-  >img {
-      width: 120px;
-      height: 120px;
-      padding: 30px;
-      margin-top: 20px;
+  > img {
+    width: 120px;
+    height: 120px;
+    padding: 30px;
+    margin-top: 20px;
   }
 `;
 
@@ -75,18 +78,17 @@ export const WhiteRoundedSmallButton = styled.div`
   padding-bottom: 16px;
   width: 145px;
   height: 184px;
-    > img {
-      width: 80px;
-      height: 80px;
-      padding: 30px;
-    }
+  > img {
+    width: 80px;
+    height: 80px;
+    padding: 30px;
+  }
 `;
 
 export const WhiteBorderButton = styled.div`
   width: 100%;
   height: 48px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   border: 1px solid #ffffff;
@@ -100,9 +102,9 @@ export const WhiteTransButton = styled.div`
   justify-content: center;
   border-radius: 50px;
   background-color: #f6f6f620;
-  `;
+`;
 
-  export const YellowButton = styled.div`
+export const YellowButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,7 +112,7 @@ export const WhiteTransButton = styled.div`
   height: 52px;
   border: none;
   border-radius: 30px;
-  background-color: #FFD64F;
+  background-color: #ffd64f;
 `;
 
 export const GrayBorderButton = styled.div`

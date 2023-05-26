@@ -45,8 +45,8 @@ export default function SetModal (props) {
         <Container>
             <SubTitleFont>세트로 주문하시겠습니까?</SubTitleFont>
             <BtnContainer>
-                <WhiteRoundedButton imgSrc={"Images/Main/setBurger.svg"} text={"세트 선택"} onClick={()=>{navigate('/selectDetail')}}/>
-                <WhiteRoundedButton imgSrc={"Images/Main/onlyBurger.svg"} text={"단품 선택"}/>
+                <WhiteRoundedButton imgSrc={"Images/Main/setBurger.svg"} text={"세트 선택"} small={true} onClick={()=>{navigate('/selectDetail')}}/>
+                <WhiteRoundedButton imgSrc={"Images/Main/onlyBurger.svg"} text={"단품 선택"} small={true} />
             </BtnContainer>
             <GrayBorderButton name={"취소"}/>
         </Container>

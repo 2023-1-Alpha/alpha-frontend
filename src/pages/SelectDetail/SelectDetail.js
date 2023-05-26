@@ -1,14 +1,14 @@
-import React from "react";
-import * as style from "./styles";
-import { useState } from "react";
-import DetailHeader from "../../components/Detail/DetailHeader";
-import DetailSize from "../../components/Detail/DetailSize";
-import DetailSide from "../../components/Detail/DetailSide";
-import DetailDrink from "../../components/Detail/DetailDrink";
-import DetailFinal from "../../components/Detail/DetailFinal";
-import Quantity from "../../components/Common/Quantity";
-import YellowButton from "../../components/Button/YellowButton";
-import GrayBorderButton from "../../components/Button/GrayBorderButton";
+import React from 'react';
+import * as style from './styles';
+import { useState } from 'react';
+import DetailHeader from '../../components/Detail/DetailHeader';
+import DetailSize from '../../components/Detail/DetailSize';
+import DetailSide from '../../components/Detail/DetailSide';
+import DetailDrink from '../../components/Detail/DetailDrink';
+import DetailFinal from '../../components/Detail/DetailFinal';
+import Quantity from '../../components/Common/Quantity';
+import YellowButton from '../../components/Button/YellowButton';
+import GrayBorderButton from '../../components/Button/GrayBorderButton';
 
 export default function SelectDetail() {
   const [count, setCount] = useState(0);
@@ -31,13 +31,13 @@ export default function SelectDetail() {
     // 페이지 이동
   }
 
-  const menuName = "치킨 크리스피 버거";
-  const menuPrice = "1000";
-  const menuImg = process.env.PUBLIC_URL + "/Images/Main/Burger1.svg";
+  const menuName = '치킨 크리스피 버거';
+  const menuPrice = '1000';
+  const menuImg = process.env.PUBLIC_URL + '/Images/Main/Burger1.svg';
 
-  const menuSetName = "치킨 크리스피 버거 세트";
-  const menuSetPrice = "3000";
-  const menuSetImg = process.env.PUBLIC_URL + "/Images/Main/BurgerSet1.svg";
+  const menuSetName = '치킨 크리스피 버거 세트';
+  const menuSetPrice = '3000';
+  const menuSetImg = process.env.PUBLIC_URL + '/Images/Main/BurgerSet1.svg';
 
   return (
     <style.SelectDetail>
@@ -88,13 +88,13 @@ export default function SelectDetail() {
           add_count={add_count}
         />
       )}
-        {count === 3 && (
+      {count === 3 && (
         <style.countAndCart>
-          <Quantity nums={nums} setNums={setNums}/>
-          <YellowButton name={"장바구니 추가"}/>
+          <Quantity nums={nums} setNums={setNums} />
+          <YellowButton name={'장바구니 추가'} />
         </style.countAndCart>
-        )}
-      <GrayBorderButton name={"취소"} onClick={reset}/>
+      )}
+      <GrayBorderButton name={'취소'} onClick={reset} />
     </style.SelectDetail>
   );
 }

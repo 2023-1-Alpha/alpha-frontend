@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { ContentFontLargeColor } from "../style/font";
+import React from 'react';
+import styled from 'styled-components';
+import { ContentFontLargeColor } from '../style/font';
 
 export default function Quantity (props) {
 
@@ -30,23 +30,25 @@ export default function Quantity (props) {
         props.setNums(props.nums + 1);
       }
 
-      function subNums() {
-        if (props.nums >= 2) {
-          props.setNums(props.nums - 1);
-        }
-      }
+  function subNums() {
+    if (props.nums >= 2) {
+      props.setNums(props.nums - 1);
+    }
+  }
 
-    return (
-        <NumsContainer>
-            <img src={process.env.PUBLIC_URL + "/Images/Main/BtnSub.svg"} 
-              onClick={subNums}
-            />
-            <NumsCount>
-              <ContentFontLargeColor>{props.nums}</ContentFontLargeColor>
-            </NumsCount>
-            <img src={process.env.PUBLIC_URL + "/Images/Main/BtnAdd.svg"} 
-              onClick={addNums}
-            />
-          </NumsContainer>
-    )
+  return (
+    <NumsContainer>
+      <img
+        src={process.env.PUBLIC_URL + '/Images/Main/BtnSub.svg'}
+        onClick={subNums}
+      />
+      <NumsCount>
+        <ContentFontLargeColor>{props.nums}</ContentFontLargeColor>
+      </NumsCount>
+      <img
+        src={process.env.PUBLIC_URL + '/Images/Main/BtnAdd.svg'}
+        onClick={addNums}
+      />
+    </NumsContainer>
+  );
 }
