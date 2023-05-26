@@ -10,6 +10,7 @@ export default function WhiteBorderButton(props) {
       onClick={() => {
         navigate(props.url);
       }}
+      mini={props.mini}
     >
       <ContentFontLargeWhite>{props.name}</ContentFontLargeWhite>
     </style.WhiteBorderButton>
