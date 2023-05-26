@@ -5,20 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccff38ad-14d1-4411-9313-f6397bc874c5" name="Changes" comment="Update Payment.js">
-      <change afterPath="$PROJECT_DIR$/public/images/Main/AddCart.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Pay/PaymentProcess.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/SelectDetail/AddCart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/WhiteBorderButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/WhiteBorderButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/WhiteRoundedButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/WhiteRoundedButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/YellowButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/YellowButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Detail/DetailSize.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Detail/DetailSize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu/Modal/SetModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/Modal/SetModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pay/SelectPayment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pay/SelectPayment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pay/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pay/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/SelectDetail/SelectDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SelectDetail/SelectDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SelectDetail/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SelectDetail/styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,25 +28,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Gun/Desktop/2023_1_alpha/react/yamyam&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;C:\\Users\\Gun\\Desktop\\2023_1_alpha\\react\\yamyam\\node_modules\\eslint&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Gun\\Desktop\\2023_1_alpha\\react\\yamyam\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "develop",
+    "js.linters.configure.manually.selectedeslint": "true",
+    "last_opened_file_path": "C:/Users/Gun/Desktop/2023_1_alpha/react/alpha-frontend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "C:\\Users\\Gun\\Desktop\\2023_1_alpha\\react\\alpha-frontend\\node_modules\\eslint",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Gun\\Desktop\\2023_1_alpha\\react\\yamyam\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Gun\Desktop\2023_1_alpha\react\yamyam\public\images\Main" />
@@ -71,6 +62,7 @@
       <updated>1684999569104</updated>
       <workItem from="1684999570950" duration="17261000" />
       <workItem from="1685027338560" duration="2206000" />
+      <workItem from="1685114297463" duration="1265000" />
     </task>
     <task id="LOCAL-00001" summary="Update Payment.js">
       <created>1685029425232</created>
