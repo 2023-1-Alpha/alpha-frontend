@@ -51,13 +51,14 @@ function App() {
             <Route exact path="/makePayments" Component={Payment} />
             <Route exact path="/completePayments" Component={CompletePayment} />
 
+            <Route exact path="/home" Component={RealHome} />
             <Route exact path="/seniorHome" Component={SeniorMain} />
             <Route exact path="/seniorMakePayments" Component={SeniorPayment} />
             <Route path="/seniorSelectBurger" Component={SelectBurger} />
             <Route path="/seniorSelectDrink" Component={SelectDrink} />
             <Route
               exact
-              path="/seniorSelectBugerOrSide"
+              path="/seniorSelectBurgerOrSide"
               Component={SeniorBurgerOrSide}
             />
             <Route
