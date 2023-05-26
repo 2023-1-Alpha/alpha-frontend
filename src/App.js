@@ -27,6 +27,7 @@ function App() {
           <Route exact path="/selectDetail" Component={SelectDetail} />
           <Route exact path="/gotoOrder" Component={OrderSheet} />
           <Route exact path="/makepayments" Component={Payment} />
+          <Route exact path="/WebcamPreview" Component={WebcamPreview} />
         </Routes>
       </Container>
     </>
