@@ -4,6 +4,13 @@ import Home from './pages/Home/Home';
 import SelectMenu from './pages/SelectMenu/SelectMenu';
 import SelectDetail from './pages/SelectDetail/SelectDetail';
 import WebcamPreview from './pages/WebcamPreview';
+import {
+  RecoilRoot,
+  atom,
+  selector,
+  useRecoilState,
+  useRecoilValue,
+} from 'recoil';
 
 import { GlobalStyle } from './global';
 import Payment from './pages/Payment/Payment';
@@ -19,16 +26,18 @@ const Container = styled.div`
 function App() {
   return (
     <>
-      <GlobalStyle />
-      <Container>
-        <Routes>
-          <Route exact path="/" Component={Home} />
-          <Route exact path="/selectMenu" Component={SelectMenu} />
-          <Route exact path="/selectDetail" Component={SelectDetail} />
-          <Route exact path="/gotoOrder" Component={OrderSheet} />
-          <Route exact path="/makepayments" Component={Payment} />
-        </Routes>
-      </Container>
+      <RecoilRoot>
+        <GlobalStyle />
+        <Container>
+          <Routes>
+            <Route exact path="/" Component={Home} />
+            <Route exact path="/selectMenu" Component={SelectMenu} />
+            <Route exact path="/selectDetail" Component={SelectDetail} />
+            <Route exact path="/gotoOrder" Component={OrderSheet} />
+            <Route exact path="/makepayments" Component={Payment} />
+          </Routes>
+        </Container>
+      </RecoilRoot>
     </>
   );
 }
