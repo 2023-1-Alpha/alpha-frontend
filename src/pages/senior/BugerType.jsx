@@ -9,15 +9,15 @@ export default function SeniorBurgerType() {
     <SeniorFourButtonLayout
       firstBtnContent="고기 패티가 좋아요"
       firstBtnOnclick={() => {
-        navigate('/');
+        navigate('/seniorSelectBurger', { state: 'meat' });
       }}
       secondBtnContent="치킨 패티가 좋아요"
       secondBtnOnclick={() => {
-        navigate('/');
+        navigate('/seniorSelectBurger', { state: 'chicken' });
       }}
       thirdBtnContent="새우 패티가 좋아요"
       thirdBtnOnclick={() => {
-        navigate('/');
+        navigate('/seniorSelectBurger', { state: 'shrimp' });
       }}
     />
   );

@@ -9,11 +9,11 @@ export default function SeniorBurgerOrSide() {
     <SeniorThreeButtonLayout
       firstBtnContent="햄버거 먹기"
       firstBtnOnclick={() => {
-        navigate('/seniorSelectBuger');
+        navigate('/seniorSelectBurgerType');
       }}
       secondBtnContent="다른 메뉴 먹기"
       secondBtnOnclick={() => {
-        navigate('/seniorSelectSideMenu');
+        navigate('/seniorSideMenuSelect');
       }}
     />
   );

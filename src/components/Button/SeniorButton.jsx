@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 const BigButton = styled.button`
-  padding: 79px 12px;
+  width: 525px;
+  height: 285px;
   background: #df843e;
   border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0px 14px 22px -10px rgba(0, 0, 0, 0.05);
@@ -9,14 +10,15 @@ const BigButton = styled.button`
   font-family: 'IBM Plex Sans KR';
   font-style: normal;
   font-weight: 600;
-  font-size: 80px;
+  font-size: 72px;
   line-height: 120px;
   text-align: center;
   color: #ffffff;
 `;
 
 const SmallButton = styled.button`
-  padding: 46px 79px;
+  width: 525px;
+  height: 176px;
   background: #df843e;
   border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0px 14px 22px -10px rgba(0, 0, 0, 0.05);
@@ -32,6 +34,7 @@ const SmallButton = styled.button`
 
 const GoBackHomeButton = styled.button`
   display: flex;
+  width: 525px;
   gap: 20px;
   background: #df843e;
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -41,7 +44,7 @@ const GoBackHomeButton = styled.button`
   font-family: 'IBM Plex Sans KR';
   font-style: normal;
   font-weight: 600;
-  font-size: 40px;
+  font-size: 36px;
   line-height: 60px;
   display: flex;
   align-items: center;

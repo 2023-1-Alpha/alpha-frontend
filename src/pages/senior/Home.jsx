@@ -29,7 +29,7 @@ const ErrorSpan = styled.span`
   font-family: 'IBM Plex Sans KR';
   font-style: normal;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 24px;
   line-height: 45px;
   color: #e93e18;
 `;

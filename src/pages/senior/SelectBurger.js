@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import WhiteRoundedLargeButton from '../../components/Button/WhiteRoundedLargeButton';
 import { TitleFontWhite } from '../../components/style/font';
 import { SeniorGoToHomeButton } from '../../components/Button/SeniorButton';
+import { useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const Container = styled.div`
   height: calc(100vh - 74px);
@@ -47,7 +49,7 @@ const MBSetList = {
     },
     {
       id: 3,
-      name: '뷸고기 버거 세트',
+      name: '불고기 버거 세트',
       imgSrc: 'Images/Main/MBSetBulgogi.svg',
       price: '6400',
     },
@@ -76,7 +78,7 @@ const MBList = {
     },
     {
       id: 3,
-      name: '뷸고기 버거',
+      name: '불고기 버거',
       imgSrc: 'Images/Main/MBBulgogi.svg',
       price: '4900',
     },
@@ -210,22 +212,56 @@ const SBList = {
 };
 
 export default function SelectBurger(props) {
+  const navigate = useNavigate();
+  const { state } = useLocation();
   return (
     <Container>
       <LogoImg src={'Images/Main/Logo.svg'} />
       <InnerContainer>
         <ButtonContainer>
-          {MBList.data.map((item) => (
-            <WhiteRoundedLargeButton
-              senior={true}
-              imgSrc={item.imgSrc}
-              text={item.name}
-              price={item.price}
-            />
-          ))}
+          {state === 'meat' &&
+            MBList.data.map((item) => (
+              <WhiteRoundedLargeButton
+                senior={true}
+                imgSrc={item.imgSrc}
+                text={item.name}
+                price={item.price}
+                onClick={() => {
+                  navigate('/seniorSelectSetOrNot');
+                }}
+              />
+            ))}
+          {state === 'chicken' &&
+            CBList.data.map((item) => (
+              <WhiteRoundedLargeButton
+                senior={true}
+                imgSrc={item.imgSrc}
+                text={item.name}
+                price={item.price}
+                onClick={() => {
+                  navigate('/seniorSelectSetOrNot');
+                }}
+              />
+            ))}
+          {state === 'shrimp' &&
+            SBList.data.map((item) => (
+              <WhiteRoundedLargeButton
+                senior={true}
+                imgSrc={item.imgSrc}
+                text={item.name}
+                price={item.price}
+                onClick={() => {
+                  navigate('/seniorSelectSetOrNot');
+                }}
+              />
+            ))}
         </ButtonContainer>
       </InnerContainer>
-      <SeniorGoToHomeButton>
+      <SeniorGoToHomeButton
+        onClick={() => {
+          navigate('/seniorHome');
+        }}
+      >
         <TitleFontWhite>처음부터 다시 주문하기</TitleFontWhite>
       </SeniorGoToHomeButton>
     </Container>

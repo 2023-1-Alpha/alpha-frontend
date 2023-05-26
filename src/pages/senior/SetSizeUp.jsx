@@ -21,10 +21,11 @@ const InfoSpan = styled.span`
   font-family: 'IBM Plex Sans KR';
   font-style: normal;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 24px;
   line-height: 45px;
   text-align: center;
   color: #121212;
+  margin: 0px 12px;
 `;
 
 const ButtonContainer = styled.div`
@@ -33,9 +34,12 @@ const ButtonContainer = styled.div`
   gap: 21px;
   margin-top: 23px;
   margin-bottom: 43px;
+  padding: 0px 12px;
 `;
 
 const Button = styled.button`
+  width: 525px;
+  height: 225px;
   padding: 46px 79px;
   background: #df843e;
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -69,14 +73,14 @@ export default function SeniotSetSizeUp() {
       <ButtonContainer>
         <Button
           onClick={() => {
-            navigate('/');
+            navigate('/seniorSelectSide', { state: 'large' });
           }}
         >
           네
         </Button>
         <Button
           onClick={() => {
-            navigate('/');
+            navigate('/seniorSelectSide', { state: 'small' });
           }}
         >
           아니요

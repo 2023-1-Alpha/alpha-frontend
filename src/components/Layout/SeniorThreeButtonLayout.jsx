@@ -22,6 +22,7 @@ const ButtonContainer = styled.div`
   flex-direction: column;
   gap: 21px;
   margin-bottom: 43px;
+  padding: 0px 12px;
 `;
 
 export default function SeniorThreeButtonLayout({

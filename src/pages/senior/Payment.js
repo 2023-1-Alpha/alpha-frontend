@@ -6,6 +6,7 @@ import {
 } from '../../components/style/font';
 import { SeniorCancelButton } from '../../components/Button/SeniorButton';
 import SendOrderModal from '../../components/Pay/Modal/SendOrderModal';
+import { useNavigate } from 'react-router-dom';
 
 const Wrap = styled.div`
   display: flex;
@@ -28,6 +29,7 @@ const PaymentImg = styled.img`
 
 export default function SeniorPayment() {
   const [isopen, setIsopen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setTimeout(() => {
@@ -44,7 +46,12 @@ export default function SeniorPayment() {
         <SeniorContentFont>결제 오류시 카드를 긁어주세요</SeniorContentFont>
       </Content>
       <PaymentImg src={'/Images/Main/seniorPaymentImg.svg'} />
-      <SeniorCancelButton children={'결제 취소'} />
+      <SeniorCancelButton
+        children={'결제 취소'}
+        onClick={() => {
+          navigate('/seniorHome');
+        }}
+      />
     </Wrap>
   );
 }

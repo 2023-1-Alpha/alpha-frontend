@@ -10,11 +10,16 @@ import SeniorPayment from './pages/senior/Payment';
 import SeniorBurgerOrSide from './pages/senior/BurgerOrSide';
 import SeniorBurgerType from './pages/senior/BugerType';
 import SeniotSetSizeUp from './pages/senior/SetSizeUp';
-import SeniorSideMenuSelct from './pages/senior/SideMenuSlect';
+import SeniorSideMenuSelect from './pages/senior/SideMenuSelect';
+import SelectBurger from './pages/senior/SelectBurger';
+import SelectSide from './pages/senior/SelectSide';
+import SelectDessert from './pages/senior/SelectDessert';
 
 import { GlobalStyle } from './global';
 import Payment from './pages/Payment/Payment';
 import OrderSheet from './pages/OrderSheet/OrderSheet';
+import SeniorSetOrNot from './pages/senior/SetOrNot';
+import SelectDrink from './pages/senior/SelectDrink';
 
 const Container = styled.div`
   max-width: 545px;
@@ -34,8 +39,11 @@ function App() {
           <Route exact path="/selectDetail" Component={SelectDetail} />
           <Route exact path="/gotoOrder" Component={OrderSheet} />
           <Route exact path="/makepayments" Component={Payment} />
+
           <Route exact path="/seniorHome" Component={SeniorMain} />
           <Route exact path="/seniorMakePayments" Component={SeniorPayment} />
+          <Route path="/seniorSelectBurger" Component={SelectBurger} />
+          <Route path="/seniorSelectDrink" Component={SelectDrink} />
           <Route
             exact
             path="/seniorSelectBugerOrSide"
@@ -43,15 +51,23 @@ function App() {
           />
           <Route
             exact
-            path="/seniorSelectBugerType"
+            path="/seniorSelectSetOrNot"
+            Component={SeniorSetOrNot}
+          />
+
+          <Route
+            exact
+            path="/seniorSelectBurgerType"
             Component={SeniorBurgerType}
           />
           <Route exact path="/seniorSetSizeUp" Component={SeniotSetSizeUp} />
           <Route
             exact
-            path="/seniorSideMenuSlect"
-            Component={SeniorSideMenuSelct}
+            path="/seniorSideMenuSelect"
+            Component={SeniorSideMenuSelect}
           />
+          <Route exact path="/seniorSelectSide" Component={SelectSide} />
+          <Route exact path="/seniorSelectDessert" Component={SelectDessert} />
         </Routes>
       </Container>
     </>

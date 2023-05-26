@@ -30,94 +30,102 @@ const LogoImg = styled.img`
   height: 156px;
   margin-top: 28px;
 `;
-
-const LargeSideList = {
+const LargeDrinkList = {
   data: [
     {
       id: 1,
-      name: '감자 튀김 큰 거',
-      imgSrc: 'Images/Main/SideFrenchFries.svg',
+      name: '콜라 큰 거',
+      imgSrc: 'Images/Main/SideDrinkCoke.svg',
       price: '',
     },
     {
       id: 2,
-      name: '츄러스',
-      imgSrc: 'Images/Main/SideChurros.svg',
-      price: '+200 원',
+      name: '사이다 큰 거',
+      imgSrc: 'Images/Main/SideDrinkCider.svg',
+      price: '',
     },
     {
       id: 3,
-      name: '치즈스틱',
-      imgSrc: 'Images/Main/SideCheeseStick.svg',
+      name: '커피',
+      imgSrc: 'Images/Main/SideDrinkCoffee.svg',
       price: '+500 원',
     },
     {
       id: 4,
-      name: '치킨 너겟',
-      imgSrc: 'Images/Main/SideChicken.svg',
-      price: '+1000 원',
+      name: '물',
+      imgSrc: 'Images/Main/SideDrinkWater.svg',
+      price: '+200 원',
     },
   ],
 };
-
-const SideList = {
+const DrinkList = {
   data: [
     {
       id: 1,
-      name: '감자 튀김',
-      imgSrc: 'Images/Main/SideFrenchFries.svg',
+      name: '콜라',
+      imgSrc: 'Images/Main/SideDrinkCoke.svg',
       price: '',
     },
     {
       id: 2,
-      name: '츄러스',
-      imgSrc: 'Images/Main/SideChurros.svg',
-      price: '+700 원',
+      name: '사이다',
+      imgSrc: 'Images/Main/SideDrinkCider.svg',
+      price: '',
     },
     {
       id: 3,
-      name: '치즈스틱',
-      imgSrc: 'Images/Main/SideCheeseStick.svg',
+      name: '커피',
+      imgSrc: 'Images/Main/SideDrinkCoffee.svg',
       price: '+1000 원',
     },
     {
       id: 4,
-      name: '치킨 너겟',
-      imgSrc: 'Images/Main/SideChicken.svg',
-      price: '+1500 원',
+      name: '물',
+      imgSrc: 'Images/Main/SideDrinkWater.svg',
+      price: '+700 원',
     },
   ],
 };
-
-const OnlySideList = {
+const OnlyDrinkList = {
   data: [
     {
       id: 1,
-      name: '감자 튀김',
-      imgSrc: 'Images/Main/SideFrenchFries.svg',
+      name: '콜라',
+      imgSrc: 'Images/Main/SideDrinkCoke.svg',
       price: '1200 원',
     },
     {
       id: 2,
-      name: '츄러스',
-      imgSrc: 'Images/Main/SideChurros.svg',
-      price: '1500 원',
+      name: '사이다',
+      imgSrc: 'Images/Main/SideDrinkCider.svg',
+      price: '1200 원',
     },
     {
       id: 3,
-      name: '치즈스틱',
-      imgSrc: 'Images/Main/SideCheeseStick.svg',
-      price: '2000 원',
+      name: '커피',
+      imgSrc: 'Images/Main/SideDrinkCoffee.svg',
+      price: '1500 원',
     },
     {
       id: 4,
-      name: '치킨 너겟',
-      imgSrc: 'Images/Main/SideChicken.svg',
-      price: '2400 원',
+      name: '물',
+      imgSrc: 'Images/Main/SideDrinkWater.svg',
+      price: '1000 원',
+    },
+    {
+      id: 5,
+      name: '우유',
+      imgSrc: 'Images/Main/SideDrinkMilk.svg',
+      price: '1500 원',
+    },
+    {
+      id: 6,
+      name: '오렌지 주스',
+      imgSrc: 'Images/Main/SideDrinkOrange.svg',
+      price: '1800 원',
     },
   ],
 };
-
 const InfoSpan = styled.span`
   font-family: 'IBM Plex Sans KR';
   font-style: normal;
@@ -129,50 +137,49 @@ const InfoSpan = styled.span`
   margin-bottom: 12px;
 `;
 
-export default function SelectSide(props) {
+export default function SelectDrink(props) {
   const { state } = useLocation();
   const navigate = useNavigate();
   const [drink, setDrink] = useState('');
-  console.log(state);
   return (
     <Container>
       <LogoImg src={'Images/Main/Logo.svg'} />
-      <InfoSpan>사이드를 선택해주세요</InfoSpan>
+      <InfoSpan>음료를 선택해주세요</InfoSpan>
       <InnerContainer>
         <ButtonContainer>
           {state === 'large' &&
-            LargeSideList.data.map((item) => (
+            LargeDrinkList.data.map((item) => (
               <WhiteRoundedLargeButton
                 senior={true}
                 imgSrc={item.imgSrc}
                 text={item.name}
                 price={item.price}
                 onClick={() => {
-                  navigate('/seniorSelectDrink', { state: 'large' });
+                  navigate('/seniorMakePayments');
                 }}
               />
             ))}
           {state === 'small' &&
-            SideList.data.map((item) => (
+            DrinkList.data.map((item) => (
               <WhiteRoundedLargeButton
                 senior={true}
                 imgSrc={item.imgSrc}
                 text={item.name}
                 price={item.price}
                 onClick={() => {
-                  navigate('/seniorSelectDrink', { state: 'small' });
+                  navigate('/seniorMakePayments');
                 }}
               />
             ))}
-          {state === 'onlySide' &&
-            OnlySideList.data.map((item) => (
+          {state === 'onlyDrink' &&
+            OnlyDrinkList.data.map((item) => (
               <WhiteRoundedLargeButton
                 senior={true}
                 imgSrc={item.imgSrc}
                 text={item.name}
                 price={item.price}
                 onClick={() => {
-                  navigate('/seniorSelectDrink', { state: 'small' });
+                  navigate('/seniorMakePayments');
                 }}
               />
             ))}
