@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SeniorBigButton } from '../../components/Button/SeniorButton';
+
+import WaitingCameraModal from '../../components/Menu/Modal/WaitingCameraModal';
 
 const Container = styled.div`
   padding-top: 38px;
@@ -36,7 +38,6 @@ const ErrorSpan = styled.span`
 
 export default function SeniorMain() {
   const [userType, setUserType] = useState('');
-
   const navigate = useNavigate();
 
   return (
@@ -49,14 +50,14 @@ export default function SeniorMain() {
       <ButtonContainer>
         <SeniorBigButton
           onClick={() => {
-            navigate('/seniorSelectBugerOrSide');
+            navigate('/seniorSelectBurgerOrSide');
           }}
         >
           매장 식사하기
         </SeniorBigButton>
         <SeniorBigButton
           onClick={() => {
-            navigate('/seniorSelectBugerOrSide');
+            navigate('/seniorSelectBurgerOrSide');
           }}
         >
           포장하기

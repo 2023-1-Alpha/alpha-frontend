@@ -24,16 +24,11 @@ export default function Sidebar(props) {
       },
       {
         id: 3,
-        name: '커피',
-        imgSrc: process.env.PUBLIC_URL + '/Images/Main/SideCoffee.svg',
-      },
-      {
-        id: 4,
         name: '디저트',
         imgSrc: process.env.PUBLIC_URL + '/Images/Main/SideDessert.svg',
       },
       {
-        id: 5,
+        id: 4,
         name: '음료',
         imgSrc: process.env.PUBLIC_URL + '/Images/Main/SideDrink.svg',
       },

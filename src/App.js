@@ -20,6 +20,7 @@ import Payment from './pages/Payment/Payment';
 import OrderSheet from './pages/OrderSheet/OrderSheet';
 import SeniorSetOrNot from './pages/senior/SetOrNot';
 import SelectDrink from './pages/senior/SelectDrink';
+import RealHome from './pages/RealHome';
 
 const Container = styled.div`
   max-width: 545px;
@@ -35,6 +36,7 @@ function App() {
       <Container>
         <Routes>
           <Route exact path="/" Component={Home} />
+          <Route exact path="/home" Component={RealHome} />
           <Route exact path="/selectMenu" Component={SelectMenu} />
           <Route exact path="/selectDetail" Component={SelectDetail} />
           <Route exact path="/gotoOrder" Component={OrderSheet} />
@@ -46,7 +48,7 @@ function App() {
           <Route path="/seniorSelectDrink" Component={SelectDrink} />
           <Route
             exact
-            path="/seniorSelectBugerOrSide"
+            path="/seniorSelectBurgerOrSide"
             Component={SeniorBurgerOrSide}
           />
           <Route
@@ -68,8 +70,7 @@ function App() {
           />
           <Route exact path="/seniorSelectSide" Component={SelectSide} />
           <Route exact path="/seniorSelectDessert" Component={SelectDessert} />
-                      <Route exact path="/WebcamPreview" Component={WebcamPreview} />
-
+          <Route exact path="/WebcamPreview" Component={WebcamPreview} />
         </Routes>
       </Container>
     </>
