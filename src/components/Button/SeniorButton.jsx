@@ -49,6 +49,17 @@ const GoBackHomeButton = styled.button`
   color: #ffffff;
 `;
 
+const CancelButton = styled.button`
+  padding: 30px;
+  border: 1px solid rgba(18, 18, 18, 0.2);
+  border-radius: 40px;
+  font-family: 'IBMPlexSansBold';
+  background: #ffffff;
+  font-size: 30px;
+  color: rgba(18, 18, 18, 0.7);
+  width: 455px;
+`;
+
 export function SeniorBigButton({ children, onClick }) {
   return <BigButton onClick={onClick}>{children}</BigButton>;
 }
@@ -57,7 +68,7 @@ export function SeniorSmallButton({ children, onClick }) {
   return <SmallButton onClick={onClick}>{children}</SmallButton>;
 }
 
-export function SeniorGoToHomeButton({ children, onClick }) {
+export function SeniorGoToHomeButton({ onClick }) {
   return (
     <GoBackHomeButton onClick={onClick}>
       {
@@ -66,9 +77,13 @@ export function SeniorGoToHomeButton({ children, onClick }) {
             src={process.env.PUBLIC_URL + '/Images/Main/LeftArrow.svg'}
             alt="left arrow"
           />
-          {children}
+          처음부터 다시 주문하기
         </>
       }
     </GoBackHomeButton>
   );
+}
+
+export function SeniorCancelButton({ children, onClick }) {
+  return <CancelButton onClick={onClick}>{children}</CancelButton>;
 }

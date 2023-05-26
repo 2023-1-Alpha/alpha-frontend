@@ -3,12 +3,14 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import SelectMenu from './pages/SelectMenu/SelectMenu';
 import SelectDetail from './pages/SelectDetail/SelectDetail';
-import SelectBurger from './pages/senior/SelectBurger';
-import SelectSide from './pages/senior/SelectSide';
-import CompletePayment from './pages/CompletePayment';
 import WebcamPreview from './pages/WebcamPreview';
 
 import SeniorMain from './pages/senior/Home';
+import SeniorPayment from './pages/senior/Payment';
+import SeniorBurgerOrSide from './pages/senior/BurgerOrSide';
+import SeniorBurgerType from './pages/senior/BugerType';
+import SeniotSetSizeUp from './pages/senior/SetSizeUp';
+import SeniorSideMenuSelct from './pages/senior/SideMenuSlect';
 
 import { GlobalStyle } from './global';
 import Payment from './pages/Payment/Payment';
@@ -33,9 +35,23 @@ function App() {
           <Route exact path="/gotoOrder" Component={OrderSheet} />
           <Route exact path="/makepayments" Component={Payment} />
           <Route exact path="/seniorHome" Component={SeniorMain} />
-          <Route exact path="/CompletePayment" Component={CompletePayment} />
-          <Route exact path="/seniorSelectBurger" Component={SelectBurger} />
-          <Route exact path="/seniorSelectSide" Component={SelectSide} />
+          <Route exact path="/seniorMakePayments" Component={SeniorPayment} />
+          <Route
+            exact
+            path="/seniorSelectBugerOrSide"
+            Component={SeniorBurgerOrSide}
+          />
+          <Route
+            exact
+            path="/seniorSelectBugerType"
+            Component={SeniorBurgerType}
+          />
+          <Route exact path="/seniorSetSizeUp" Component={SeniotSetSizeUp} />
+          <Route
+            exact
+            path="/seniorSideMenuSlect"
+            Component={SeniorSideMenuSelct}
+          />
         </Routes>
       </Container>
     </>
