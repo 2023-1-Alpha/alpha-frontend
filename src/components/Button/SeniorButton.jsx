@@ -31,11 +31,22 @@ const SmallButton = styled.button`
 `;
 
 const GoBackHomeButton = styled.button`
+  display: flex;
+  gap: 20px;
   background: #df843e;
   border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0px 14px 22px -10px rgba(0, 0, 0, 0.05);
   border-radius: 30px;
   padding: 22px;
+  font-family: 'IBM Plex Sans KR';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
 `;
 
 export function SeniorBigButton({ children, onClick }) {
@@ -44,4 +55,20 @@ export function SeniorBigButton({ children, onClick }) {
 
 export function SeniorSmallButton({ children, onClick }) {
   return <SmallButton onClick={onClick}>{children}</SmallButton>;
+}
+
+export function SeniorGoToHomeButton({ children, onClick }) {
+  return (
+    <GoBackHomeButton onClick={onClick}>
+      {
+        <>
+          <img
+            src={process.env.PUBLIC_URL + '/Images/Main/LeftArrow.svg'}
+            alt="left arrow"
+          />
+          {children}
+        </>
+      }
+    </GoBackHomeButton>
+  );
 }
