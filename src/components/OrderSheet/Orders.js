@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Order from './Order';
 import { TitleFont } from '../../components/style/font';
+import { useRecoilValue } from 'recoil';
+import { ordersAtom } from '../../recoil/Order/atoms';
 
 const Container = styled.div`
   display: flex;
@@ -24,33 +26,13 @@ const OrdersContainer = styled.div`
 `;
 
 export default function Orders() {
-  const ds = {
-    order: [
-      {
-        id: 1,
-        name: '치킨 크리스피 버거',
-        price: '6200',
-      },
-      {
-        id: 2,
-        name: '치킨 크리스피 버거',
-        price: '6200',
-      },
-      {
-        id: 3,
-        name: '치킨 크리스피 버거',
-        price: '6200',
-      },
-    ],
-  };
-
-  const [orders, setOrders] = useState(ds.order);
+  const orderlist = useRecoilValue(ordersAtom);
 
   return (
     <Container>
       <TitleFont>주문</TitleFont>
       <OrdersContainer>
-        {orders.map((data) => (
+        {orderlist.map((data) => (
           <Order name={data.name} price={data.price} />
         ))}
       </OrdersContainer>
