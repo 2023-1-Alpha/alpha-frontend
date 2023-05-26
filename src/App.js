@@ -4,6 +4,13 @@ import Home from './pages/Home/Home';
 import SelectMenu from './pages/SelectMenu/SelectMenu';
 import SelectDetail from './pages/SelectDetail/SelectDetail';
 import WebcamPreview from './pages/WebcamPreview';
+import {
+  RecoilRoot,
+  atom,
+  selector,
+  useRecoilState,
+  useRecoilValue,
+} from 'recoil';
 
 import SeniorMain from './pages/senior/Home';
 import SeniorPayment from './pages/senior/Payment';
@@ -31,47 +38,49 @@ const Container = styled.div`
 function App() {
   return (
     <>
-      <GlobalStyle />
-      <Container>
-        <Routes>
-          <Route exact path="/" Component={Home} />
-          <Route exact path="/selectMenu" Component={SelectMenu} />
-          <Route exact path="/selectDetail" Component={SelectDetail} />
-          <Route exact path="/gotoOrder" Component={OrderSheet} />
-          <Route exact path="/makepayments" Component={Payment} />
+      <RecoilRoot>
+        <GlobalStyle />
+        <Container>
+          <Routes>
+            <Route exact path="/" Component={Home} />
+            <Route exact path="/selectMenu" Component={SelectMenu} />
+            <Route exact path="/selectDetail" Component={SelectDetail} />
+            <Route exact path="/gotoOrder" Component={OrderSheet} />
+            <Route exact path="/makepayments" Component={Payment} />
 
-          <Route exact path="/seniorHome" Component={SeniorMain} />
-          <Route exact path="/seniorMakePayments" Component={SeniorPayment} />
-          <Route path="/seniorSelectBurger" Component={SelectBurger} />
-          <Route path="/seniorSelectDrink" Component={SelectDrink} />
-          <Route
-            exact
-            path="/seniorSelectBugerOrSide"
-            Component={SeniorBurgerOrSide}
-          />
-          <Route
-            exact
-            path="/seniorSelectSetOrNot"
-            Component={SeniorSetOrNot}
-          />
+            <Route exact path="/seniorHome" Component={SeniorMain} />
+            <Route exact path="/seniorMakePayments" Component={SeniorPayment} />
+            <Route path="/seniorSelectBurger" Component={SelectBurger} />
+            <Route path="/seniorSelectDrink" Component={SelectDrink} />
+            <Route
+              exact
+              path="/seniorSelectBugerOrSide"
+              Component={SeniorBurgerOrSide}
+            />
+            <Route
+              exact
+              path="/seniorSelectSetOrNot"
+              Component={SeniorSetOrNot}
+            />
 
-          <Route
-            exact
-            path="/seniorSelectBurgerType"
-            Component={SeniorBurgerType}
-          />
-          <Route exact path="/seniorSetSizeUp" Component={SeniotSetSizeUp} />
-          <Route
-            exact
-            path="/seniorSideMenuSelect"
-            Component={SeniorSideMenuSelect}
-          />
-          <Route exact path="/seniorSelectSide" Component={SelectSide} />
-          <Route exact path="/seniorSelectDessert" Component={SelectDessert} />
-                      <Route exact path="/WebcamPreview" Component={WebcamPreview} />
+            <Route
+              exact
+              path="/seniorSelectBurgerType"
+              Component={SeniorBurgerType}
+            />
+            <Route exact path="/seniorSetSizeUp" Component={SeniotSetSizeUp} />
+            <Route
+              exact
+              path="/seniorSideMenuSelect"
+              Component={SeniorSideMenuSelect}
+            />
+            <Route exact path="/seniorSelectSide" Component={SelectSide} />
+            <Route exact path="/seniorSelectDessert" Component={SelectDessert} />
+                        <Route exact path="/WebcamPreview" Component={WebcamPreview} />
 
-        </Routes>
-      </Container>
+          </Routes>
+        </Container>
+      </RecoilRoot>
     </>
   );
 }
