@@ -49,7 +49,7 @@ export default function Order(props) {
       <OrderContent>
         <OrderInfo>
           <ContentFontLarge>{props.name}</ContentFontLarge>
-          <Price>{props.price}</Price>
+          <Price>₩{props.price}</Price>
           <TrashCan src={'/Images/Main/trashCan.svg'} />
         </OrderInfo>
         <Quantity mini="true" nums={nums} setNums={setNums} />
