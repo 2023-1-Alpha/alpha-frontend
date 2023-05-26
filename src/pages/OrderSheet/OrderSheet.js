@@ -15,7 +15,11 @@ export default function OrderSheet() {
           <SubTitleFontWhite>₩18600</SubTitleFontWhite>
         </style.PriceWrap>
         <style.BtnWrap>
-          <WhiteBorderButton name={'추가주문'} mini="true" />
+          <WhiteBorderButton
+            name={'추가주문'}
+            mini="true"
+            url={'/selectMenu'}
+          />
           <YellowButton name={'주문완료'} mini="true" />
         </style.BtnWrap>
       </style.Footer>
