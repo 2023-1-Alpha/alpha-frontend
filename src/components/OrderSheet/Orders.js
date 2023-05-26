@@ -28,9 +28,9 @@ export default function Orders() {
     <Container>
       <TitleFont>주문</TitleFont>
       <OrdersContainer>
-        <Order name={'치킨 크리스피 버거'} price={'₩6200'} nums={'1'} />
-        <Order name={'치킨 크리스피 버거'} price={'₩6200'} nums={'1'} />
-        <Order name={'치킨 크리스피 버거'} price={'₩6200'} nums={'1'} />
+        <Order name={'치킨 크리스피 버거'} price={'₩6200'} />
+        <Order name={'치킨 크리스피 버거'} price={'₩6200'} />
+        <Order name={'치킨 크리스피 버거'} price={'₩6200'} />
       </OrdersContainer>
     </Container>
   );

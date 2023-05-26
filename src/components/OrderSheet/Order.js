@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { ContentFontLarge } from '../style/font';
 import Quantity from '../Common/Quantity';
@@ -9,6 +9,7 @@ const Container = styled.div`
   padding: 20px;
   border: 1px solid rgba(18, 18, 18, 0.1);
   border-radius: 20px;
+  justify-content: space-around;
 `;
 
 const OrderImg = styled.img`
@@ -38,6 +39,10 @@ const TrashCan = styled.img`
 `;
 
 export default function Order(props) {
+  const [nums, setNums] = useState(1);
+
+  const deleteOrder = () => {};
+
   return (
     <Container>
       <OrderImg src={'/Images/Main/BurgerSet1.svg'} />
@@ -47,7 +52,7 @@ export default function Order(props) {
           <Price>{props.price}</Price>
           <TrashCan src={'/Images/Main/trashCan.svg'} />
         </OrderInfo>
-        <Quantity mini="true" nums={props.nums} />
+        <Quantity mini="true" nums={nums} setNums={setNums} />
       </OrderContent>
     </Container>
   );
