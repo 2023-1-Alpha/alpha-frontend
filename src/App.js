@@ -9,6 +9,7 @@ import SeniorMain from './pages/senior/Home';
 import SeniorBurgerOrSide from './pages/senior/BurgerOrSide';
 import SeniorBurgerType from './pages/senior/BugerType';
 import SeniotSetSizeUp from './pages/senior/SetSizeUp';
+import SeniorSideMenuSelct from './pages/senior/SideMenuSlect';
 
 import { GlobalStyle } from './global';
 import Payment from './pages/Payment/Payment';
@@ -44,6 +45,11 @@ function App() {
             Component={SeniorBurgerType}
           />
           <Route exact path="/seniorSetSizeUp" Component={SeniotSetSizeUp} />
+          <Route
+            exact
+            path="/seniorSideMenuSlect"
+            Component={SeniorSideMenuSelct}
+          />
         </Routes>
       </Container>
     </>
