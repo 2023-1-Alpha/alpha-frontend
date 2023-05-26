@@ -8,6 +8,7 @@ import WebcamPreview from './pages/WebcamPreview';
 import SeniorMain from './pages/senior/Home';
 import SeniorBurgerOrSide from './pages/senior/BurgerOrSide';
 import SeniorBurgerType from './pages/senior/BugerType';
+import SeniotSetSizeUp from './pages/senior/SetSizeUp';
 
 import { GlobalStyle } from './global';
 import Payment from './pages/Payment/Payment';
@@ -42,6 +43,7 @@ function App() {
             path="/seniorSelectBugerType"
             Component={SeniorBurgerType}
           />
+          <Route exact path="/seniorSetSizeUp" Component={SeniotSetSizeUp} />
         </Routes>
       </Container>
     </>

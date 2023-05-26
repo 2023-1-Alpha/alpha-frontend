@@ -57,7 +57,7 @@ export function SeniorSmallButton({ children, onClick }) {
   return <SmallButton onClick={onClick}>{children}</SmallButton>;
 }
 
-export function SeniorGoToHomeButton({ children, onClick }) {
+export function SeniorGoToHomeButton({ onClick }) {
   return (
     <GoBackHomeButton onClick={onClick}>
       {
