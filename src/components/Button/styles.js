@@ -86,7 +86,7 @@ export const WhiteRoundedSmallButton = styled.div`
 `;
 
 export const WhiteBorderButton = styled.div`
-  width: 100%;
+  width: ${(props) => (props.mini ? '205px' : '100%')};
   height: 48px;
   display: flex;
   justify-content: center;
@@ -108,7 +108,7 @@ export const YellowButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: ${(props) => (props.mini ? '205px' : '100%')};
   height: 52px;
   border: none;
   border-radius: 30px;
