@@ -68,7 +68,7 @@ export function SeniorSmallButton({ children, onClick }) {
   return <SmallButton onClick={onClick}>{children}</SmallButton>;
 }
 
-export function SeniorGoToHomeButton({ children, onClick }) {
+export function SeniorGoToHomeButton({ onClick }) {
   return (
     <GoBackHomeButton onClick={onClick}>
       {
@@ -77,7 +77,7 @@ export function SeniorGoToHomeButton({ children, onClick }) {
             src={process.env.PUBLIC_URL + '/Images/Main/LeftArrow.svg'}
             alt="left arrow"
           />
-          {children}
+          처음부터 다시 주문하기
         </>
       }
     </GoBackHomeButton>

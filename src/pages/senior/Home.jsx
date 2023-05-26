@@ -1,14 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import WhiteRoundedButton from '../../components/Button/WhiteRoundedButton';
-import { SubTitleFont } from '../../components/style/font';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {
-  SeniorBigButton,
-  SeniorGoToHomeButton,
-} from '../../components/Button/SeniorButton';
+import { SeniorBigButton } from '../../components/Button/SeniorButton';
 
 const Container = styled.div`
   padding-top: 38px;
@@ -52,8 +47,20 @@ export default function SeniorMain() {
         src={process.env.PUBLIC_URL + '/Images/Main/Logo.svg'}
       />
       <ButtonContainer>
-        <SeniorBigButton>매장 식사하기</SeniorBigButton>
-        <SeniorBigButton>포장하기</SeniorBigButton>
+        <SeniorBigButton
+          onClick={() => {
+            navigate('/seniorSelectBugerOrSide');
+          }}
+        >
+          매장 식사하기
+        </SeniorBigButton>
+        <SeniorBigButton
+          onClick={() => {
+            navigate('/seniorSelectBugerOrSide');
+          }}
+        >
+          포장하기
+        </SeniorBigButton>
       </ButtonContainer>
       <ErrorSpan>일부 메뉴 선택에 제한이 있을 수 있습니다</ErrorSpan>
     </Container>
