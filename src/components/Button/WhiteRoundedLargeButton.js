@@ -18,7 +18,7 @@ function WhiteRoundedLargeButton(props) {
         <Text>{props.text}</Text>
       )}
       {props.senior ? (
-        <SubTitleFont>￦{props.price}</SubTitleFont>
+        <SubTitleFont>{props.price}</SubTitleFont>
       ) : (
         <ContentFontLarge>￦{props.price}</ContentFontLarge>
       )}

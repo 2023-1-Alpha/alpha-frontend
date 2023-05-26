@@ -3,7 +3,9 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import SelectMenu from './pages/SelectMenu/SelectMenu';
 import SelectDetail from './pages/SelectDetail/SelectDetail';
-import PattyDetail from './pages/senior/PattyDetail';
+import SelectBurger from './pages/senior/SelectBurger';
+import SelectSide from './pages/senior/SelectSide';
+import CompletePayment from './pages/CompletePayment';
 import WebcamPreview from './pages/WebcamPreview';
 
 import SeniorMain from './pages/senior/Home';
@@ -31,7 +33,9 @@ function App() {
           <Route exact path="/gotoOrder" Component={OrderSheet} />
           <Route exact path="/makepayments" Component={Payment} />
           <Route exact path="/seniorHome" Component={SeniorMain} />
-          <Route exact path="/seniorPattyDetail" Component={PattyDetail} />
+          <Route exact path="/CompletePayment" Component={CompletePayment} />
+          <Route exact path="/seniorSelectBurger" Component={SelectBurger} />
+          <Route exact path="/seniorSelectSide" Component={SelectSide} />
         </Routes>
       </Container>
     </>

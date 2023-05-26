@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccff38ad-14d1-4411-9313-f6397bc874c5" name="Changes" comment="Add PattyDetail.js">
+      <change afterPath="$PROJECT_DIR$/public/images/Main/LeftArrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/senior/SelectSide.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Button/SeniorButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/SeniorButton.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Button/WhiteRoundedLargeButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/WhiteRoundedLargeButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Detail/DetailSize.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Detail/DetailSize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/style/font.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/style/font.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/senior/PattyDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/senior/PattyDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pay/CompletePayment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pay/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pay/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Payment/Payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Payment/Payment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/senior/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/senior/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/senior/PattyDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/senior/SelectBurger.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +67,7 @@
       <updated>1684999569104</updated>
       <workItem from="1684999570950" duration="17261000" />
       <workItem from="1685027338560" duration="2206000" />
-      <workItem from="1685105101772" duration="1435000" />
+      <workItem from="1685105101772" duration="6645000" />
     </task>
     <task id="LOCAL-00001" summary="Update Payment.js">
       <created>1685029425232</created>
