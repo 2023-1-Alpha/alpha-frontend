@@ -2,29 +2,33 @@ import React from 'react';
 import styled from 'styled-components';
 import { ContentFontLargeColor } from '../style/font';
 
-const NumsContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  height: 52px;
-  > img {
-    width: 52px;
-    height: 52px;
-  }
-`;
-const NumsCount = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 244px;
-  height: 100%;
-  border: 1px solid #df843e;
-  border-radius: 30px;
-`;
-export default function Quantity(props) {
-  function addNums() {
-    props.setNums(props.nums + 1);
-  }
+export default function Quantity (props) {
+
+  console.log(props.mini);
+
+    const NumsContainer = styled.div`
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      height: 52px;
+      >img {
+        width: ${props => props.mini ? '22px' : '52px'};
+        height: ${props => props.mini ? '22px' : '52px'};
+      }
+      `
+    const NumsCount = styled.div`
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: ${props => props.mini ? '98px' : '244px'};
+      height: 100%;
+      border: 1px solid #DF843E;
+      border-radius: 30px;
+      `
+
+    function addNums() {
+        props.setNums(props.nums + 1);
+      }
 
   function subNums() {
     if (props.nums >= 2) {
