@@ -1,7 +1,7 @@
-import React from "react";
-import * as style from "./styles";
-import styled from "styled-components";
-import { ContentFontLarge } from "../style/font";
+import React from 'react';
+import * as style from './styles';
+import styled from 'styled-components';
+import { SubTitleFont, ContentFontLarge } from '../style/font';
 
 const Text = styled(ContentFontLarge)`
   flex: 1;
@@ -12,8 +12,16 @@ function WhiteRoundedLargeButton(props) {
   return (
     <style.WhiteRoundedLargeButton onClick={props.onClick}>
       <img src={props.imgSrc} />
-      <Text>{props.text}</Text>
-      <ContentFontLarge>￦{props.price}</ContentFontLarge>
+      {props.senior ? (
+        <SubTitleFont>{props.text}</SubTitleFont>
+      ) : (
+        <Text>{props.text}</Text>
+      )}
+      {props.senior ? (
+        <SubTitleFont>{props.price}</SubTitleFont>
+      ) : (
+        <ContentFontLarge>￦{props.price}</ContentFontLarge>
+      )}
     </style.WhiteRoundedLargeButton>
   );
 }
