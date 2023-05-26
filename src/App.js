@@ -6,6 +6,8 @@ import SelectDetail from './pages/SelectDetail/SelectDetail';
 import WebcamPreview from './pages/WebcamPreview';
 
 import SeniorMain from './pages/senior/Home';
+import SeniorBurgerOrSide from './pages/senior/BurgerOrSide';
+import SeniorBurgerType from './pages/senior/BugerType';
 
 import { GlobalStyle } from './global';
 import Payment from './pages/Payment/Payment';
@@ -30,6 +32,16 @@ function App() {
           <Route exact path="/gotoOrder" Component={OrderSheet} />
           <Route exact path="/makepayments" Component={Payment} />
           <Route exact path="/seniorHome" Component={SeniorMain} />
+          <Route
+            exact
+            path="/seniorSelectBugerOrSide"
+            Component={SeniorBurgerOrSide}
+          />
+          <Route
+            exact
+            path="/seniorSelectBugerType"
+            Component={SeniorBurgerType}
+          />
         </Routes>
       </Container>
     </>
