@@ -91,7 +91,7 @@ export const WhiteRoundedSmallButton = styled.div`
 `;
 
 export const WhiteBorderButton = styled.div`
-  width: ${(props) => (props.mini ? '205px' : '100%')};
+  width: ${(props) => (props.mini ? '205px' : '366px')};
   height: 48px;
   display: flex;
   justify-content: center;

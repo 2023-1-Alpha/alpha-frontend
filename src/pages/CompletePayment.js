@@ -5,6 +5,7 @@ import {
   SubTitleFontWhite,
   ContentFontLargeWhite,
 } from '../components/style/font';
+import WhiteBorderButton from '../components/Button/WhiteBorderButton';
 
 const TextContainer = styled.div`
   display: flex;
@@ -12,16 +13,6 @@ const TextContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 190px;
-`;
-
-const WhiteBorderButton = styled.div`
-  width: 365px;
-  height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #ffffff;
-  border-radius: 50px;
 `;
 
 export const Container = styled.div`
@@ -54,9 +45,7 @@ export default function CompletePayment() {
         </TextContainer>
         <img src={'Images/Main/Check.svg'} />
       </InnerContainer>
-      <WhiteBorderButton>
-        <ContentFontLargeWhite>처음으로</ContentFontLargeWhite>
-      </WhiteBorderButton>
+      <WhiteBorderButton name={'처음으로'} />
     </Container>
   );
 }
