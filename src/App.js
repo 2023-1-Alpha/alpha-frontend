@@ -5,6 +5,8 @@ import SelectMenu from './pages/SelectMenu/SelectMenu';
 import SelectDetail from './pages/SelectDetail/SelectDetail';
 import WebcamPreview from './pages/WebcamPreview';
 
+import SeniorMain from './pages/senior/Home';
+
 import { GlobalStyle } from './global';
 import Payment from './pages/Payment/Payment';
 import OrderSheet from './pages/OrderSheet/OrderSheet';
@@ -27,6 +29,7 @@ function App() {
           <Route exact path="/selectDetail" Component={SelectDetail} />
           <Route exact path="/gotoOrder" Component={OrderSheet} />
           <Route exact path="/makepayments" Component={Payment} />
+          <Route exact path="/seniorHome" Component={SeniorMain} />
         </Routes>
       </Container>
     </>
