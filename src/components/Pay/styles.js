@@ -30,18 +30,6 @@ export const Container = styled.div`
   align-items: center;
 `;
 
-export const CompletePayment = styled.div`
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-  > img {
-    width: 200px;
-    margin-top: 140px;
-  }
-`;
-
 export const GiftPayment = styled.div`
   display: flex;
   width: 100%;

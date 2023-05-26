@@ -6,6 +6,7 @@ export const WhiteRoundedButton = styled.div`
   align-items: center;
   width: 140px;
   background: #ffffff;
+  cursor: pointer;
   > img {
     width: ${(props) => (props.small ? '60px' : '88px')};
     height: ${(props) => (props.small ? '60px' : '88px')};
@@ -23,6 +24,7 @@ export const WhiteRoundedButton = styled.div`
 export const GrayRoundedButton = styled.div`
   display: flex;
   flex-direction: column;
+  cursor: pointer;
   > img {
     width: 60px;
     height: 60px;
@@ -43,6 +45,7 @@ export const WhiteFlatRoundedButton = styled.div`
   border-radius: 30px;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
   border: 1px solid #f6f6f6;
+  cursor: pointer;
   > div {
     margin: 0;
     font-weight: 700;
@@ -60,6 +63,7 @@ export const WhiteRoundedLargeButton = styled.div`
   width: 220px;
   height: 276px;
   padding-bottom: 24px;
+  cursor: pointer;
   > img {
     width: 120px;
     height: 120px;
@@ -78,6 +82,7 @@ export const WhiteRoundedSmallButton = styled.div`
   padding-bottom: 16px;
   width: 145px;
   height: 184px;
+  cursor: pointer;
   > img {
     width: 80px;
     height: 80px;
@@ -93,6 +98,7 @@ export const WhiteBorderButton = styled.div`
   align-items: center;
   border: 1px solid #ffffff;
   border-radius: 50px;
+  cursor: pointer;
 `;
 
 export const WhiteTransButton = styled.div`
@@ -102,6 +108,7 @@ export const WhiteTransButton = styled.div`
   justify-content: center;
   border-radius: 50px;
   background-color: #f6f6f620;
+  cursor: pointer;
 `;
 
 export const YellowButton = styled.div`
@@ -113,6 +120,7 @@ export const YellowButton = styled.div`
   border: none;
   border-radius: 30px;
   background-color: #ffd64f;
+  cursor: pointer;
 `;
 
 export const GrayBorderButton = styled.div`
@@ -123,4 +131,5 @@ export const GrayBorderButton = styled.div`
   height: 52px;
   border: 1px solid #12121270;
   border-radius: 30px;
+  cursor: pointer;
 `;

@@ -4,22 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccff38ad-14d1-4411-9313-f6397bc874c5" name="Changes" comment="Update Payment.js">
-      <change afterPath="$PROJECT_DIR$/public/images/Main/AddCart.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Pay/PaymentProcess.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/SelectDetail/AddCart.js" afterDir="false" />
+    <list default="true" id="ccff38ad-14d1-4411-9313-f6397bc874c5" name="Changes" comment="Add Sides page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/WhiteBorderButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/WhiteBorderButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/WhiteRoundedButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/WhiteRoundedButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/YellowButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/YellowButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Detail/DetailSize.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Detail/DetailSize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu/Modal/SetModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/Modal/SetModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pay/SelectPayment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pay/SelectPayment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pay/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pay/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SelectDetail/SelectDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SelectDetail/SelectDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SelectDetail/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SelectDetail/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pay/Modal/SendOrderModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pay/Modal/SendOrderModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/senior/Payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/senior/Payment.js" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +16,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -43,19 +37,20 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
     &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Gun/Desktop/2023_1_alpha/react/yamyam&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Gun/Desktop/2023_1_alpha/react/alpha-frontend&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;C:\\Users\\Gun\\Desktop\\2023_1_alpha\\react\\yamyam\\node_modules\\eslint&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;C:\\Users\\Gun\\Desktop\\2023_1_alpha\\react\\alpha-frontend\\node_modules\\eslint&quot;,
     &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Gun\\Desktop\\2023_1_alpha\\react\\yamyam\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Gun\\Desktop\\2023_1_alpha\\react\\alpha-frontend\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Gun\Desktop\2023_1_alpha\react\yamyam\public\images\Main" />
@@ -71,6 +66,7 @@
       <updated>1684999569104</updated>
       <workItem from="1684999570950" duration="17261000" />
       <workItem from="1685027338560" duration="2206000" />
+      <workItem from="1685114297463" duration="2739000" />
     </task>
     <task id="LOCAL-00001" summary="Update Payment.js">
       <created>1685029425232</created>
@@ -79,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685029425232</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add Sides page">
+      <created>1685126254057</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685126254057</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

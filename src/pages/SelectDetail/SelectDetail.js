@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as style from './styles';
-import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import DetailHeader from '../../components/Detail/DetailHeader';
 import DetailSize from '../../components/Detail/DetailSize';
 import DetailSide from '../../components/Detail/DetailSide';
@@ -19,7 +19,7 @@ export default function SelectDetail() {
     name: '치킨 크리스피 버거',
     price: 6200,
   };
-
+  const navigate = useNavigate();
   const [count, setCount] = useState(0);
   const [nums, setNums] = useState(1);
   const [order, setOrder] = useState({
@@ -72,6 +72,13 @@ export default function SelectDetail() {
     // 페이지 이동
   }
 
+  function goBack() {
+    if (count === 0) {
+      navigate('/selectMenu');
+    } else {
+      setCount(count - 1);
+    }
+  }
   return (
     <>
       {count < 4 ? (
@@ -109,7 +116,7 @@ export default function SelectDetail() {
               <YellowButton name={'장바구니 추가'} onClick={() => addOrder()} />
             </style.countAndCart>
           )}
-          <GrayBorderButton name={'취소'} onClick={() => reset()} />
+          <GrayBorderButton name={'취소'} onClick={() => goBack()} />
         </style.SelectDetail>
       ) : (
         <AddCart orderlist={orderlist} />
