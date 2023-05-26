@@ -34,7 +34,7 @@ export default function SendOrderModal(props) {
   useEffect(() => {
     const timer = setTimeout(() => {
       // 실행할 함수
-      navigate('/seniorHome');
+      navigate('/completePayments');
     }, 5000);
     return () => {
       clearTimeout(timer);

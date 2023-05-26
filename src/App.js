@@ -27,6 +27,7 @@ import Payment from './pages/Payment/Payment';
 import OrderSheet from './pages/OrderSheet/OrderSheet';
 import SeniorSetOrNot from './pages/senior/SetOrNot';
 import SelectDrink from './pages/senior/SelectDrink';
+import CompletePayment from './pages/CompletePayment';
 import RealHome from './pages/RealHome';
 
 const Container = styled.div`
@@ -47,7 +48,8 @@ function App() {
             <Route exact path="/selectMenu" Component={SelectMenu} />
             <Route exact path="/selectDetail" Component={SelectDetail} />
             <Route exact path="/gotoOrder" Component={OrderSheet} />
-            <Route exact path="/makepayments" Component={Payment} />
+            <Route exact path="/makePayments" Component={Payment} />
+            <Route exact path="/completePayments" Component={CompletePayment} />
 
             <Route exact path="/seniorHome" Component={SeniorMain} />
             <Route exact path="/seniorMakePayments" Component={SeniorPayment} />
@@ -76,9 +78,12 @@ function App() {
               Component={SeniorSideMenuSelect}
             />
             <Route exact path="/seniorSelectSide" Component={SelectSide} />
-            <Route exact path="/seniorSelectDessert" Component={SelectDessert} />
-                        <Route exact path="/WebcamPreview" Component={WebcamPreview} />
-
+            <Route
+              exact
+              path="/seniorSelectDessert"
+              Component={SelectDessert}
+            />
+            <Route exact path="/WebcamPreview" Component={WebcamPreview} />
           </Routes>
         </Container>
       </RecoilRoot>
