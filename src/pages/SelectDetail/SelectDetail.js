@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import * as style from './styles';
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import DetailHeader from '../../components/Detail/DetailHeader';
 import DetailSize from '../../components/Detail/DetailSize';
