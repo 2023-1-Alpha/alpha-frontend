@@ -13,7 +13,7 @@ export default function MenuFooter(props) {
         <SubTitleFontWhite>￦16,900</SubTitleFontWhite>
         <WhiteTransButton name={'주문내역'} url={'/gotoOrder'} />
       </style.orderInfo>
-      <WhiteBorderButton name={'처음으로'} url={'/'} />
+      <WhiteBorderButton name={'처음으로'} url={'/defaultHome'} />
     </style.MenuFooter>
   );
 }

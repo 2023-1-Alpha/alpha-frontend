@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home/Home';
+import DefaultHome from './pages/DefaultHome/DefaultHome';
 import SelectMenu from './pages/SelectMenu/SelectMenu';
 import SelectDetail from './pages/SelectDetail/SelectDetail';
 import WebcamPreview from './pages/WebcamPreview';
@@ -28,7 +28,7 @@ import OrderSheet from './pages/OrderSheet/OrderSheet';
 import SeniorSetOrNot from './pages/senior/SetOrNot';
 import SelectDrink from './pages/senior/SelectDrink';
 import CompletePayment from './pages/CompletePayment';
-import RealHome from './pages/RealHome';
+import Home from './pages/Home';
 
 const Container = styled.div`
   max-width: 545px;
@@ -45,13 +45,15 @@ function App() {
         <Container>
           <Routes>
             <Route exact path="/" Component={Home} />
+
+            <Route exact path="/defaultHome" Component={DefaultHome} />
+
             <Route exact path="/selectMenu" Component={SelectMenu} />
             <Route exact path="/selectDetail" Component={SelectDetail} />
             <Route exact path="/gotoOrder" Component={OrderSheet} />
             <Route exact path="/makePayments" Component={Payment} />
             <Route exact path="/completePayments" Component={CompletePayment} />
 
-            <Route exact path="/home" Component={RealHome} />
             <Route exact path="/seniorHome" Component={SeniorMain} />
             <Route exact path="/seniorMakePayments" Component={SeniorPayment} />
             <Route path="/seniorSelectBurger" Component={SelectBurger} />

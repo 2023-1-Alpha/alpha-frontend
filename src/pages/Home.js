@@ -37,7 +37,7 @@ const BottomImg = styled.img`
   margin-right: 12px;
 `;
 
-export default function RealHome() {
+export default function Home() {
   const navigate = useNavigate();
   const [isopen, setIsopen] = useState(false);
 

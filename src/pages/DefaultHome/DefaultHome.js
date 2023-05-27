@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import WaitingCameraModal from '../../components/Menu/Modal/WaitingCameraModal';
 
-export default function Home() {
+export default function DefaultHome() {
   const [userType, setUserType] = useState('');
 
   const navigate = useNavigate();
