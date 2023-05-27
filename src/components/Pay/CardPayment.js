@@ -61,12 +61,7 @@ export default function CardPayment(props) {
           </ContentFontMiddle>
           <ContentFontMiddle>결제 오류 시 카드를 긁어주세요</ContentFontMiddle>
         </TextContainer>
-        <TerminalImg
-          src={'Images/Main/CardTerminal.svg'}
-          onClick={() => {
-            props.add_count();
-          }}
-        />
+        <TerminalImg src={'Images/Main/CardTerminal.svg'} />
         <ArrowImg src={'Images/Main/Uparrow.svg'} />
       </style.Container>
     </style.CardPayment>
