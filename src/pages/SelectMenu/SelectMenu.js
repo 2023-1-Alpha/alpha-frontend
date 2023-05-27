@@ -46,7 +46,7 @@ export default function SelectMenu() {
         <Sidebar menuType={menuType} getMenutype={getMenutype} />
         <style.Menu>
           <SubTitleFont>{menuTypeName}</SubTitleFont>
-          <MenuHeader menuType={menuType} />
+          <MenuHeader />
           <MenuList menuType={menuType} openModal={openModal} />
           <MenuFooter />
         </style.Menu>

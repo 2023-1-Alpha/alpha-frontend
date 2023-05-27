@@ -37,7 +37,7 @@ const BottomImg = styled.img`
   margin-right: 12px;
 `;
 
-export default function RealHome() {
+export default function Home() {
   const navigate = useNavigate();
   const [isopen, setIsopen] = useState(false);
 
@@ -52,7 +52,7 @@ export default function RealHome() {
       <HeaderContainer>
         <img src={'Images/Main/LogoWhite.svg'} />
       </HeaderContainer>
-      <MainImg src={'Images/Main/Fuck3.svg'} />
+      <MainImg src={'Images/Main/HomeImg.svg'} />
       <TextContainer>
         <BottomImg src={'Images/Main/UpFinger.svg'} />
         <SubTitleFontWhite>주문하시려면 화면을 터치하세요</SubTitleFontWhite>

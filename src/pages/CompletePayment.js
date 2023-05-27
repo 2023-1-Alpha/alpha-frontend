@@ -45,7 +45,7 @@ export default function CompletePayment() {
         </TextContainer>
         <img src={'Images/Main/Check.svg'} />
       </InnerContainer>
-      <WhiteBorderButton name={'처음으로'} />
+      <WhiteBorderButton name={'처음으로'} url={'/'} />
     </Container>
   );
 }
