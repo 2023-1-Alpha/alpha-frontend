@@ -16,6 +16,11 @@ export default function DetailSize(props) {
 
   const selectNormalHandler = () => {
     props.add_count();
+    props.setOrder((prevOrder) => ({
+      ...prevOrder,
+      name: prevOrder.name + ' 세트',
+      price: prevOrder.price + 500,
+    }));
   };
 
   return (
@@ -23,7 +28,7 @@ export default function DetailSize(props) {
     <style.DetailSize>
       <WhiteRoundedLargeButton
         imgSrc={''}
-        text={name}
+        text={name + ' 세트'}
         price={price}
         onClick={selectNormalHandler}
       />

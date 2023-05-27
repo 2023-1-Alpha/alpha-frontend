@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Order from './Order';
 import { TitleFont } from '../../components/style/font';
-import { useRecoilValue } from 'recoil';
+import { useRecoilState } from 'recoil';
 import { ordersAtom } from '../../recoil/Order/atoms';
 
 const Container = styled.div`
@@ -26,14 +26,27 @@ const OrdersContainer = styled.div`
 `;
 
 export default function Orders() {
-  const orderlist = useRecoilValue(ordersAtom);
+  //rocoil data
+  const [orderlist, setOrderlist] = useRecoilState(ordersAtom);
+
+  const deleteHandler = (id) => {
+    setOrderlist((prevOrderlist) =>
+      prevOrderlist.filter((order) => order.id !== id),
+    );
+  };
 
   return (
     <Container>
       <TitleFont>주문</TitleFont>
       <OrdersContainer>
         {orderlist.map((data) => (
-          <Order name={data.name} price={data.price} />
+          <Order
+            id={data.id}
+            name={data.name}
+            price={data.price}
+            nums={data.number}
+            deleteHandler={deleteHandler}
+          />
         ))}
       </OrdersContainer>
     </Container>
