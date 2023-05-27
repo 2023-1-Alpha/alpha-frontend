@@ -57,7 +57,7 @@ function App() {
             <Route path="/seniorSelectDrink" Component={SelectDrink} />
             <Route
               exact
-              path="/seniorSelectBugerOrSide"
+              path="/seniorSelectBurgerOrSide"
               Component={SeniorBurgerOrSide}
             />
             <Route
