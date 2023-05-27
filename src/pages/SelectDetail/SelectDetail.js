@@ -33,15 +33,12 @@ export default function SelectDetail() {
       price: 0,
     },
     price: orderData.price,
+    number: 1,
   });
 
   //recoilData
   const orderlist = useRecoilValue(ordersAtom);
   const setOrderlist = useSetRecoilState(ordersAtom);
-
-  useEffect(() => {
-    console.log(order);
-  });
 
   function getCount() {
     setCount(count);
@@ -60,6 +57,7 @@ export default function SelectDetail() {
       const updatedOrder = {
         ...prevOrder,
         price: prevOrder.price + prevOrder.side.price + prevOrder.drink.price,
+        number: nums,
       };
       setOrderlist((orderlist) => [...orderlist, updatedOrder]);
       add_count();
@@ -105,6 +103,7 @@ export default function SelectDetail() {
 
           {count === 3 && (
             <DetailFinal
+              nums={nums}
               order={order}
               setOrder={setOrder}
               add_count={add_count}
