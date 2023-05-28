@@ -34,7 +34,7 @@ export default function WaitingCameraModal(props) {
   useEffect(() => {
     const timer = setTimeout(() => {
       // 실행할 함수
-      navigate('/seniorHome');
+      navigate('/WebcamPreview');
     }, 2000);
     return () => {
       clearTimeout(timer);
