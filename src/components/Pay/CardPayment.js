@@ -1,9 +1,11 @@
 import styled from 'styled-components';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import * as style from './styles';
 import { SubTitleFont, TitleFont } from '../../components/style/font';
 import { ContentFontLargeWhite } from '../../components/style/font';
 import { ContentFontMiddle } from '../../components/style/font';
+import { useNavigate } from 'react-router-dom';
+import SendOrderModal from './Modal/SendOrderModal';
 // font size 이상해 ..
 
 const RoundedContainer = styled.div`
@@ -36,8 +38,18 @@ const ArrowImg = styled.img`
 `;
 
 export default function CardPayment(props) {
+  const [isopen, setIsopen] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsopen(true);
+    }, 2000);
+  }, []);
+
   return (
     <style.CardPayment>
+      <SendOrderModal modalIsOpen={isopen} />
       <TitleFont>결제를 진행해주세요</TitleFont>
       <style.Container>
         <RoundedContainer>
@@ -49,12 +61,7 @@ export default function CardPayment(props) {
           </ContentFontMiddle>
           <ContentFontMiddle>결제 오류 시 카드를 긁어주세요</ContentFontMiddle>
         </TextContainer>
-        <TerminalImg
-          src={'Images/Main/CardTerminal.svg'}
-          onClick={() => {
-            props.add_count();
-          }}
-        />
+        <TerminalImg src={'Images/Main/CardTerminal.svg'} />
         <ArrowImg src={'Images/Main/Uparrow.svg'} />
       </style.Container>
     </style.CardPayment>

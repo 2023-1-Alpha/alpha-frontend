@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccff38ad-14d1-4411-9313-f6397bc874c5" name="Changes" comment="Update Payment.js">
+    <list default="true" id="ccff38ad-14d1-4411-9313-f6397bc874c5" name="Changes" comment="Fix CancelBtn payment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SelectDetail/AddCart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SelectDetail/AddCart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SelectDetail/SelectDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SelectDetail/SelectDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/WebcamPreview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/WebcamPreview.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +14,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/connect-server" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -26,27 +29,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "develop",
-    "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "C:/Users/Gun/Desktop/2023_1_alpha/react/alpha-frontend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "C:\\Users\\Gun\\Desktop\\2023_1_alpha\\react\\alpha-frontend\\node_modules\\eslint",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Gun\\Desktop\\2023_1_alpha\\react\\alpha-frontend\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Gun/Desktop/2023_1_alpha/react/alpha-frontend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;C:\\Users\\Gun\\Desktop\\2023_1_alpha\\react\\alpha-frontend\\node_modules\\eslint&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Gun\\Desktop\\2023_1_alpha\\react\\alpha-frontend\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Gun\Desktop\2023_1_alpha\react\alpha-frontend\public\images\Main" />
       <recent name="C:\Users\Gun\Desktop\2023_1_alpha\react\yamyam\public\images\Main" />
     </key>
   </component>
@@ -61,6 +65,10 @@
       <workItem from="1684999570950" duration="17261000" />
       <workItem from="1685027338560" duration="2206000" />
       <workItem from="1685114297463" duration="2739000" />
+      <workItem from="1685182492237" duration="2118000" />
+      <workItem from="1685195517630" duration="974000" />
+      <workItem from="1685247079075" duration="27000" />
+      <workItem from="1685250021987" duration="4588000" />
     </task>
     <task id="LOCAL-00001" summary="Update Payment.js">
       <created>1685029425232</created>
@@ -69,7 +77,35 @@
       <option name="project" value="LOCAL" />
       <updated>1685029425232</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fix Home Router">
+      <created>1685195801912</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685195801913</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add CancelBtn Payment.js">
+      <created>1685195877639</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685195877639</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Delete MenuHeader">
+      <created>1685195918488</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685195918488</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fix CancelBtn payment">
+      <created>1685196173020</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685196173020</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -77,6 +113,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update Payment.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Payment.js" />
+    <MESSAGE value="Fix Home Router" />
+    <MESSAGE value="Add CancelBtn Payment.js" />
+    <MESSAGE value="Delete MenuHeader" />
+    <MESSAGE value="Fix CancelBtn payment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix CancelBtn payment" />
   </component>
 </project>

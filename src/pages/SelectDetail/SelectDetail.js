@@ -10,10 +10,35 @@ import AddCart from './AddCart';
 import Quantity from '../../components/Common/Quantity';
 import YellowButton from '../../components/Button/YellowButton';
 import GrayBorderButton from '../../components/Button/GrayBorderButton';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
+import { ordersAtom } from '../../recoil/Order/atoms';
+
 export default function SelectDetail() {
+  // 백엔드에서 받아오기
+  const orderData = {
+    name: '치킨 크리스피 버거',
+    price: 6200,
+  };
   const navigate = useNavigate();
   const [count, setCount] = useState(0);
   const [nums, setNums] = useState(1);
+  const [order, setOrder] = useState({
+    name: orderData.name,
+    side: {
+      name: '',
+      price: 0,
+    },
+    drink: {
+      name: '',
+      price: 0,
+    },
+    price: orderData.price,
+    number: 1,
+  });
+
+  //recoilData
+  const orderlist = useRecoilValue(ordersAtom);
+  const setOrderlist = useSetRecoilState(ordersAtom);
 
   function getCount() {
     setCount(count);
@@ -27,6 +52,19 @@ export default function SelectDetail() {
     }
   }
 
+  const addOrder = () => {
+    setOrder((prevOrder) => {
+      const updatedOrder = {
+        ...prevOrder,
+        price: prevOrder.price + prevOrder.side.price + prevOrder.drink.price,
+        number: nums,
+      };
+      setOrderlist((orderlist) => [...orderlist, updatedOrder]);
+      add_count();
+      return updatedOrder;
+    });
+  };
+
   function reset() {
     setCount(0);
     // 페이지 이동
@@ -39,14 +77,6 @@ export default function SelectDetail() {
       setCount(count - 1);
     }
   }
-  const menuName = '치킨 크리스피 버거';
-  const menuPrice = '1000';
-  const menuImg = process.env.PUBLIC_URL + '/Images/Main/Burger1.svg';
-
-  const menuSetName = '치킨 크리스피 버거 세트';
-  const menuSetPrice = '3000';
-  const menuSetImg = process.env.PUBLIC_URL + '/Images/Main/BurgerSet1.svg';
-
   return (
     <>
       {count < 4 ? (
@@ -58,63 +88,37 @@ export default function SelectDetail() {
           />
           {count === 0 && (
             <DetailSize
-              menuName={menuName}
-              menuPrice={menuPrice}
-              menuImg={menuImg}
-              menuSetName={menuSetName}
-              menuSetPrice={menuSetPrice}
-              menuSetImg={menuSetImg}
               add_count={add_count}
+              setOrder={setOrder}
+              orderData={orderData}
             />
           )}
           {count === 1 && (
-            <DetailSide
-              menuName={menuName}
-              menuPrice={menuPrice}
-              menuImg={menuImg}
-              menuSetName={menuSetName}
-              menuSetPrice={menuSetPrice}
-              menuSetImg={menuSetImg}
-              add_count={add_count}
-            />
+            <DetailSide add_count={add_count} setOrder={setOrder} />
           )}
 
           {count === 2 && (
-            <DetailDrink
-              menuName={menuName}
-              menuPrice={menuPrice}
-              menuImg={menuImg}
-              menuSetName={menuSetName}
-              menuSetPrice={menuSetPrice}
-              menuSetImg={menuSetImg}
-              add_count={add_count}
-            />
+            <DetailDrink add_count={add_count} setOrder={setOrder} />
           )}
 
           {count === 3 && (
             <DetailFinal
-              menuName={menuName}
-              menuPrice={menuPrice}
-              menuImg={menuImg}
-              menuSetName={menuSetName}
-              menuSetPrice={menuSetPrice}
-              menuSetImg={menuSetImg}
+              nums={nums}
+              order={order}
+              setOrder={setOrder}
               add_count={add_count}
             />
           )}
           {count === 3 && (
             <style.countAndCart>
               <Quantity nums={nums} setNums={setNums} />
-              <YellowButton
-                name={'장바구니 추가'}
-                onClick={() => add_count()}
-              />
+              <YellowButton name={'장바구니 추가'} onClick={() => addOrder()} />
             </style.countAndCart>
           )}
           <GrayBorderButton name={'취소'} onClick={() => goBack()} />
         </style.SelectDetail>
       ) : (
-        <AddCart />
+        <AddCart orderlist={orderlist} />
       )}
     </>
   );

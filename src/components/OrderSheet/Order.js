@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { ContentFontLarge } from '../style/font';
 import Quantity from '../Common/Quantity';
+import { useRecoilState } from 'recoil';
+import { ordersAtom } from '../../recoil/Order/atoms';
 
 const Container = styled.div`
   display: flex;
@@ -39,9 +41,24 @@ const TrashCan = styled.img`
 `;
 
 export default function Order(props) {
-  const [nums, setNums] = useState(1);
+  const [nums, setNums] = useState(props.nums);
+  const [orderlist, setOrderlist] = useRecoilState(ordersAtom);
 
-  const deleteOrder = () => {};
+  //nums, props.id가 바뀔 때마다 호출
+  useEffect(() => {
+    setOrderlist((prevOrderlist) => {
+      const updatedOrderlist = prevOrderlist.map((order) => {
+        if (order.id === props.id) {
+          return {
+            ...order,
+            number: nums,
+          };
+        }
+        return order;
+      });
+      return updatedOrderlist;
+    });
+  }, [nums, props.id]);
 
   return (
     <Container>
@@ -49,8 +66,11 @@ export default function Order(props) {
       <OrderContent>
         <OrderInfo>
           <ContentFontLarge>{props.name}</ContentFontLarge>
-          <Price>₩{props.price}</Price>
-          <TrashCan src={'/Images/Main/trashCan.svg'} />
+          <Price>₩{props.price * nums}</Price>
+          <TrashCan
+            src={'/Images/Main/trashCan.svg'}
+            onClick={() => props.deleteHandler(props.id)}
+          />
         </OrderInfo>
         <Quantity mini="true" nums={nums} setNums={setNums} />
       </OrderContent>
