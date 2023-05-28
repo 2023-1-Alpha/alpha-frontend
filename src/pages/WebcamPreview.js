@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const Container = styled.div`
   display: flex;
@@ -243,17 +244,16 @@ const WebcamPreview = () => {
     const image = canvasElement.toDataURL('image/png');
     setCapturedImage(image);
     setProgressingShowModal(true);
-    // TODO: API Integration
-    // const result = await fetch(API)
-    const result = 'senior';
-    // const result = 'young';
-    if (result === 'young') {
+    const result = await axios.post(`${process.env.REACT_APP_SERVER_URL}/model`, {
+      image,
+    });
+    if (!result) alert('오류');
+    const age = result.data.age.split('-')[0];
+    if (age === '00') {
       navigate('/defaultHome');
-    } else if (result === 'senior') {
+    } else {
       setProgressingShowModal(false);
       setResultShowModal(true);
-    } else {
-      // people not found
     }
   };
 
