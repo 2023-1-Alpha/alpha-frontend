@@ -1,22 +1,18 @@
-import React from "react";
-import * as style from "./styles";
-import { SubTitleFont } from "../../components/style/font";
-export default function DetailFinal(props) {
+import React from 'react';
+import * as style from './styles';
+import { SubTitleFont } from '../../components/style/font';
 
-  return(
+export default function DetailFinal(props) {
+  const { name, side, drink, price } = props.order;
+
+  return (
     <style.DetailFinal>
-      <SubTitleFont>
-        {props.menuSetName}
+      <SubTitleFont>{name}</SubTitleFont>
+      <hr />
+      <SubTitleFont style={{ color: '#DF843E' }}>
+        ￦{(price + side.price + drink.price) * props.nums}
       </SubTitleFont>
-      <hr/>
-      <SubTitleFont
-        style={{color:"#DF843E"}}
-        >
-        ￦{props.menuSetPrice}
-      </SubTitleFont>
-      <img
-        src={props.menuSetImg}
-      />
+      <img src={''} />
     </style.DetailFinal>
-  )
+  );
 }

@@ -27,8 +27,6 @@ const CountMini = styled(ContentFontLargeColor)`
 `;
 
 export default function Quantity(props) {
-  console.log(props.mini);
-
   function addNums() {
     props.setNums(props.nums + 1);
   }
