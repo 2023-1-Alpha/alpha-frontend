@@ -14,10 +14,12 @@ import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { ordersAtom } from '../../recoil/Order/atoms';
 
 export default function SelectDetail() {
+  const { state } = useLocation();
+  console.log(state.menuPrice);
   // 백엔드에서 받아오기
   const orderData = {
-    name: '치킨 크리스피 버거',
-    price: 6200,
+    name: state.menuName,
+    price: state.menuPrice,
   };
   const navigate = useNavigate();
   const { state } = useLocation();

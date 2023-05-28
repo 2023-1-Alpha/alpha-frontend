@@ -26,7 +26,10 @@ export default function MenuList(props) {
               imgSrc={`${process.env.REACT_APP_SERVER_URL}/images/${item._id}.png`}
               menu={item.name}
               price={item.price}
-              onClick={props.openModal}
+              onClick={() => {
+                props.openModal();
+                props.getMenuInfo(item.name, item.price);
+              }}
             />
           )) : '준비중 입니다.'}
       </style.MenuGrid>

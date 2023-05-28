@@ -17,6 +17,8 @@ export default function SelectMenu() {
   const [menuType, setMenuType] = useState(1);
   const [menuTypeName, setMenuTypeName] = useState('버거');
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [menuName, setMenuName] = useState('');
+  const [menuPrice, setMenuPrice] = useState('');
 
   const orderlist = useRecoilValue(ordersAtom);
 
@@ -26,7 +28,10 @@ export default function SelectMenu() {
     setMenuType(menuType);
     setMenuTypeName(menuTypeName);
   }
-
+  function getMenuInfo(menuName, menuPrice) {
+    setMenuName(menuName);
+    setMenuPrice(menuPrice);
+  }
   function openModal() {
     setModalIsOpen(true);
   }
@@ -38,7 +43,12 @@ export default function SelectMenu() {
   return (
     <>
       {menuType == 1 ? (
-        <SetModal closeModal={closeModal} modalIsOpen={modalIsOpen} />
+        <SetModal
+          closeModal={closeModal}
+          modalIsOpen={modalIsOpen}
+          menuName={menuName}
+          menuPrice={menuPrice}
+        />
       ) : (
         <SingleModal closeModal={closeModal} modalIsOpen={modalIsOpen} />
       )}
@@ -47,7 +57,11 @@ export default function SelectMenu() {
         <style.Menu>
           <SubTitleFont>{menuTypeName}</SubTitleFont>
           <MenuHeader />
-          <MenuList menuType={menuType} openModal={openModal} />
+          <MenuList
+            menuType={menuType}
+            openModal={openModal}
+            getMenuInfo={getMenuInfo}
+          />
           <MenuFooter />
         </style.Menu>
       </style.Wrap>
