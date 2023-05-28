@@ -63,7 +63,12 @@ export default function SingleModal(props) {
         <BtnContainer>
           <Quantity nums={nums} setNums={setNums} />
           <YellowButton name={'장바구니 추가'} />
-          <GrayBorderButton name={'취소'} />
+          <GrayBorderButton
+            name={'취소'}
+            onClick={() => {
+              props.closeModal();
+            }}
+          />
         </BtnContainer>
       </Container>
     </Modal>
