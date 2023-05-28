@@ -25,7 +25,10 @@ export default function MenuList(props) {
             <GrayRoundedButton
               menu={item.name}
               price={item.price}
-              onClick={props.openModal}
+              onClick={() => {
+                props.openModal();
+                props.getMenuInfo(item.name, item.price);
+              }}
             />
           ))}
       </style.MenuGrid>

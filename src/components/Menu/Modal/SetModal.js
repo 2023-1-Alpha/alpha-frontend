@@ -38,7 +38,10 @@ const BtnContainer = styled.div`
 export default function SetModal(props) {
   Modal.setAppElement('#root');
   const navigate = useNavigate();
-
+  const orderData = {
+    name: '치킨 크리스피 버거',
+    price: 6200,
+  };
   return (
     <Modal
       isOpen={props.modalIsOpen}
@@ -54,9 +57,15 @@ export default function SetModal(props) {
             text={'세트 선택'}
             small={true}
             onClick={() => {
-              navigate('/selectDetail');
+              navigate('/selectDetail', {
+                state: {
+                  menuName: props.menuName,
+                  menuPrice: props.menuPrice,
+                },
+              });
             }}
           />
+          {/* 장바구니 추가 */}
           <WhiteRoundedButton
             imgSrc={'Images/Main/onlyBurger.svg'}
             text={'단품 선택'}

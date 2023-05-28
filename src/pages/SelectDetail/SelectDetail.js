@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import * as style from './styles';
+import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import DetailHeader from '../../components/Detail/DetailHeader';
 import DetailSize from '../../components/Detail/DetailSize';
@@ -14,10 +15,12 @@ import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { ordersAtom } from '../../recoil/Order/atoms';
 
 export default function SelectDetail() {
+  const { state } = useLocation();
+  console.log(state.menuPrice);
   // 백엔드에서 받아오기
   const orderData = {
-    name: '치킨 크리스피 버거',
-    price: 6200,
+    name: state.menuName,
+    price: state.menuPrice,
   };
   const navigate = useNavigate();
   const [count, setCount] = useState(0);
