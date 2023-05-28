@@ -4,6 +4,7 @@ import WhiteRoundedLargeButton from '../../components/Button/WhiteRoundedLargeBu
 import { TitleFontWhite } from '../../components/style/font';
 import { SeniorGoToHomeButton } from '../../components/Button/SeniorButton';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useRecoilState } from 'recoil';
 
 const Container = styled.div`
   height: calc(100vh - 74px);
@@ -141,6 +142,7 @@ export default function SelectDrink(props) {
   const { state } = useLocation();
   const navigate = useNavigate();
   const [drink, setDrink] = useState('');
+
   return (
     <Container>
       <LogoImg src={'Images/Main/Logo.svg'} />

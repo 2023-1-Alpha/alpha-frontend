@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router';
 import { SubTitleFont } from '../../style/font';
 import WhiteRoundedButton from '../../Button/WhiteRoundedButton';
 import GrayBorderButton from '../../Button/GrayBorderButton';
@@ -70,6 +71,9 @@ export default function SetModal(props) {
             imgSrc={'Images/Main/onlyBurger.svg'}
             text={'단품 선택'}
             small={true}
+            onClick={() => {
+              navigate('/selectDetail', { state: true });
+            }}
           />
         </BtnContainer>
         <GrayBorderButton

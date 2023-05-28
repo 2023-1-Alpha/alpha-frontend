@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import * as style from './styles';
-import { useLocation } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import DetailHeader from '../../components/Detail/DetailHeader';
 import DetailSize from '../../components/Detail/DetailSize';
 import DetailSide from '../../components/Detail/DetailSide';
@@ -23,6 +22,7 @@ export default function SelectDetail() {
     price: state.menuPrice,
   };
   const navigate = useNavigate();
+  const { state } = useLocation();
   const [count, setCount] = useState(0);
   const [nums, setNums] = useState(1);
   const [order, setOrder] = useState({
@@ -38,6 +38,13 @@ export default function SelectDetail() {
     price: orderData.price,
     number: 1,
   });
+
+  useEffect(() => {
+    if (singleMenu) {
+      setCount(4);
+    }
+    console.log(singleMenu);
+  }, [singleMenu]);
 
   //recoilData
   const orderlist = useRecoilValue(ordersAtom);
