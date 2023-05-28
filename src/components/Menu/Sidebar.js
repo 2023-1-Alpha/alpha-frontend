@@ -8,7 +8,7 @@ export default function Sidebar(props) {
   const sideSelectors = {
     data: [
       {
-        id: 0,
+        id: 77,
         name: '추천 메뉴',
         imgSrc: process.env.PUBLIC_URL + '/Images/Main/SideRecommend.svg',
       },
