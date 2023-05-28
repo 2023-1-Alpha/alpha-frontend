@@ -20,18 +20,19 @@ export default function MenuList(props) {
   return (
     <style.MenuList>
       <style.MenuGrid>
-        {menu?.length ?
-          menu.map((item) => (
-            <GrayRoundedButton
-              imgSrc={`${process.env.REACT_APP_SERVER_URL}/images/${item._id}.png`}
-              menu={item.name}
-              price={item.price}
-              onClick={() => {
-                props.openModal();
-                props.getMenuInfo(item.name, item.price);
-              }}
-            />
-          )) : '준비중 입니다.'}
+        {menu?.length
+          ? menu.map((item) => (
+              <GrayRoundedButton
+                imgSrc={`${process.env.REACT_APP_SERVER_URL}/images/${item._id}.png`}
+                menu={item.name}
+                price={item.price}
+                onClick={() => {
+                  props.openModal(item);
+                  props.getMenuInfo(item.name, item.price);
+                }}
+              />
+            ))
+          : '준비중 입니다.'}
       </style.MenuGrid>
     </style.MenuList>
   );

@@ -6,6 +6,8 @@ import Quantity from '../../Common/Quantity';
 import { useState } from 'react';
 import YellowButton from '../../Button/YellowButton';
 import GrayBorderButton from '../../Button/GrayBorderButton';
+import { useRecoilState } from 'recoil';
+import { ordersAtom } from '../../../recoil/Order/atoms';
 
 const ModalStyles = {
   content: {
@@ -49,28 +51,36 @@ const FoodName = styled(SubTitleFont)`
 export default function SingleModal(props) {
   Modal.setAppElement('#root');
   const [nums, setNums] = useState(1);
+
   return (
-    <Modal
-      isOpen={props.modalIsOpen}
-      style={ModalStyles}
-      onRequestClose={props.closeModal}
-      shouldCloseOnOverlayClick={true}
-    >
-      <Container>
-        <MenuImg src={'Images/Main/icecream.svg'} />
-        <FoodName>소프트 콘</FoodName>
-        <SubTitleFontColor>₩1500</SubTitleFontColor>
-        <BtnContainer>
-          <Quantity nums={nums} setNums={setNums} />
-          <YellowButton name={'장바구니 추가'} />
-          <GrayBorderButton
-            name={'취소'}
-            onClick={() => {
-              props.closeModal();
-            }}
+    props?.item && (
+      <Modal
+        isOpen={props.modalIsOpen}
+        style={ModalStyles}
+        onRequestClose={props.closeModal}
+        shouldCloseOnOverlayClick={true}
+      >
+        <Container>
+          <MenuImg
+            src={`${process.env.REACT_APP_SERVER_URL}/images/${props.item._id}.png`}
           />
-        </BtnContainer>
-      </Container>
-    </Modal>
+          <FoodName>{props.menuName}</FoodName>
+          <SubTitleFontColor>₩{props.menuPrice}</SubTitleFontColor>
+          <BtnContainer>
+            <Quantity nums={nums} setNums={setNums} />
+            <YellowButton
+              name={'장바구니 추가'}
+              onClick={() => props.UpdateSingleOrder(nums)}
+            />
+            <GrayBorderButton
+              name={'취소'}
+              onClick={() => {
+                props.closeModal();
+              }}
+            />
+          </BtnContainer>
+        </Container>
+      </Modal>
+    )
   );
 }

@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router';
+import { useRecoilState } from 'recoil';
+import { ordersAtom } from '../../../recoil/Order/atoms';
 import { SubTitleFont } from '../../style/font';
 import WhiteRoundedButton from '../../Button/WhiteRoundedButton';
 import GrayBorderButton from '../../Button/GrayBorderButton';
@@ -39,10 +41,7 @@ const BtnContainer = styled.div`
 export default function SetModal(props) {
   Modal.setAppElement('#root');
   const navigate = useNavigate();
-  const orderData = {
-    name: '치킨 크리스피 버거',
-    price: 6200,
-  };
+
   return (
     <Modal
       isOpen={props.modalIsOpen}
@@ -71,9 +70,7 @@ export default function SetModal(props) {
             imgSrc={'Images/Main/onlyBurger.svg'}
             text={'단품 선택'}
             small={true}
-            onClick={() => {
-              navigate('/selectDetail', { state: true });
-            }}
+            onClick={() => props.UpdateSingleOrder(1)}
           />
         </BtnContainer>
         <GrayBorderButton
