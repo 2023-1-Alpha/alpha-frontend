@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccff38ad-14d1-4411-9313-f6397bc874c5" name="Changes" comment="">
+    <list default="true" id="ccff38ad-14d1-4411-9313-f6397bc874c5" name="Changes" comment="Fix CancelBtn payment">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu/Modal/WaitingCameraModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/Modal/WaitingCameraModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/WebcamPreview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/WebcamPreview.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +65,10 @@
       <workItem from="1684999570950" duration="17261000" />
       <workItem from="1685027338560" duration="2206000" />
       <workItem from="1685114297463" duration="2739000" />
+      <workItem from="1685182492237" duration="2118000" />
+      <workItem from="1685195517630" duration="974000" />
+      <workItem from="1685247079075" duration="27000" />
+      <workItem from="1685250021987" duration="1779000" />
     </task>
     <task id="LOCAL-00001" summary="Update Payment.js">
       <created>1685029425232</created>
@@ -74,7 +77,35 @@
       <option name="project" value="LOCAL" />
       <updated>1685029425232</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fix Home Router">
+      <created>1685195801912</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685195801913</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add CancelBtn Payment.js">
+      <created>1685195877639</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685195877639</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Delete MenuHeader">
+      <created>1685195918488</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685195918488</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fix CancelBtn payment">
+      <created>1685196173020</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685196173020</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,6 +113,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update Payment.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Payment.js" />
+    <MESSAGE value="Fix Home Router" />
+    <MESSAGE value="Add CancelBtn Payment.js" />
+    <MESSAGE value="Delete MenuHeader" />
+    <MESSAGE value="Fix CancelBtn payment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix CancelBtn payment" />
   </component>
 </project>

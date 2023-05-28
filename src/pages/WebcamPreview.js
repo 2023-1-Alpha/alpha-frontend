@@ -52,17 +52,16 @@ const CaptureButton = styled.button`
   border: 0;
 `;
 
-const InfoMessage = styled.span`
+const InfoMessage = styled.div`
   font-family: 'IBM Plex Sans KR';
   font-style: normal;
   font-weight: 700;
   font-size: 22px;
   line-height: 33px;
-  display: flex;
-  align-items: center;
   text-align: center;
+
   color: #e93e18;
-  margin-top: 30px;
+
   ${(props) =>
     props.small &&
     `
@@ -71,6 +70,12 @@ const InfoMessage = styled.span`
     line-height: 27px;
     margin-top: 0;
     `}
+`;
+
+const MessageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const ModalContainer = styled.div`
@@ -106,7 +111,7 @@ const ModalBox = styled.div`
 const ButtonContainer = styled.div`
   display: flex;
   gap: 28px;
-  padding: 12px 0 21px 0;
+  padding: 12px 0 20px 0;
 `;
 
 const Button = styled.button`
@@ -161,9 +166,12 @@ const ResultModal = () => {
             아니요
           </Button>
         </ButtonContainer>
-        <InfoMessage small>
-          간편모드 사용 시 일부 메뉴 선택에 제한이 있을 수 있습니다
-        </InfoMessage>
+        <MessageContainer>
+          <InfoMessage small>간편모드 사용 시</InfoMessage>
+          <InfoMessage small>
+            일부 메뉴 선택에 제한이 있을 수 있습니다
+          </InfoMessage>
+        </MessageContainer>
       </ModalBox>
     </ModalContainer>
   );
@@ -272,9 +280,10 @@ const WebcamPreview = () => {
       <CaptureButton onClick={captureImage} disabled={capturedImage}>
         촬영
       </CaptureButton>
-      <InfoMessage>
-        UI 제공에 활용된 사진은 주문 완료 후 즉시 폐기됩니다.
-      </InfoMessage>
+      <MessageContainer>
+        <InfoMessage>UI 제공에 활용된 사진은 </InfoMessage>
+        <InfoMessage>주문 완료 후 즉시 폐기됩니다.</InfoMessage>
+      </MessageContainer>
     </Container>
   );
 };
