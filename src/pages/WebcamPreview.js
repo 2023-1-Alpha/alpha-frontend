@@ -107,13 +107,16 @@ const WebcamPreview = () => {
     const context = canvasElement.getContext('2d');
 
     const drawOverlay = () => {
+      context.save();
+      context.scale(-1, 1);
       context.drawImage(
         videoElement,
-        0,
+        -canvasElement.width,
         0,
         canvasElement.width,
         canvasElement.height,
       );
+      context.restore();
 
       if (overlayImageRef.current) {
         context.drawImage(
