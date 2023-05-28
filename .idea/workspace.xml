@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccff38ad-14d1-4411-9313-f6397bc874c5" name="Changes" comment="Fix CancelBtn payment">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/WebcamPreview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/WebcamPreview.js" afterDir="false" />
     </list>
@@ -51,6 +50,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Gun\Desktop\2023_1_alpha\react\alpha-frontend\public\images\Main" />
       <recent name="C:\Users\Gun\Desktop\2023_1_alpha\react\yamyam\public\images\Main" />
     </key>
   </component>
@@ -68,7 +68,7 @@
       <workItem from="1685182492237" duration="2118000" />
       <workItem from="1685195517630" duration="974000" />
       <workItem from="1685247079075" duration="27000" />
-      <workItem from="1685250021987" duration="1779000" />
+      <workItem from="1685250021987" duration="4588000" />
     </task>
     <task id="LOCAL-00001" summary="Update Payment.js">
       <created>1685029425232</created>
