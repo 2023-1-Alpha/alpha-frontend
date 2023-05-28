@@ -3,11 +3,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Container = styled.div`
-  padding-top: 69px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: realtive;
+  width: 100%;
+  height: 100%;
 `;
 
 const Title = styled.span`
@@ -20,6 +20,7 @@ const Title = styled.span`
   align-items: center;
   text-align: center;
   color: #121212;
+  padding-top: 69px;
 `;
 
 const Guideline = styled.img`
@@ -77,9 +78,6 @@ const ModalContainer = styled.div`
   height: 100vh;
   background: rgba(0, 0, 0, 0.2);
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 `;
 
 const ModalBox = styled.div`
@@ -99,6 +97,10 @@ const ModalBox = styled.div`
   width: 506px;
   justify-content: center;
   padding: 33px 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const ButtonContainer = styled.div`
@@ -144,17 +146,16 @@ const ResultModal = () => {
         <br />
         간편 모드를 사용하시겠습니까?
         <ButtonContainer>
-          {/* TODO: Page Connect */}
           <Button
             onClick={() => {
-              navigate('/');
+              navigate('/seniorHome');
             }}
           >
             예
           </Button>
           <Button
             onClick={() => {
-              navigate('/');
+              navigate('/defaultHome');
             }}
           >
             아니요
@@ -220,10 +221,6 @@ const WebcamPreview = () => {
       });
   }, []);
 
-  useEffect(() => {
-    console.log(capturedImage);
-  }, [capturedImage]);
-
   const captureImage = async () => {
     const canvasElement = canvasRef.current;
     const context = canvasElement.getContext('2d');
@@ -240,23 +237,22 @@ const WebcamPreview = () => {
     setProgressingShowModal(true);
     // TODO: API Integration
     // const result = await fetch(API)
-    // const result = 'senior';
-    // // const result = "young"
-    // if (result === 'young') {
-    //   // TODO: Page Connect
-    //   navigate('/');
-    // } else if (result === 'senior') {
-    //   setProgressingShowModal(false);
-    //   setResultShowModal(true);
-    // } else {
-    //   // people not found
-    // }
+    const result = 'senior';
+    // const result = 'young';
+    if (result === 'young') {
+      navigate('/defaultHome');
+    } else if (result === 'senior') {
+      setProgressingShowModal(false);
+      setResultShowModal(true);
+    } else {
+      // people not found
+    }
   };
 
   return (
     <Container>
-      {showProgressingModal && ProgressingModal()}
-      {showResultModal && ResultModal()}
+      {showProgressingModal && <ProgressingModal />}
+      {showResultModal && <ResultModal />}
       <Title>가이드라인에 맞춰 촬영해주세요</Title>
       <VideoContainer>
         <video
