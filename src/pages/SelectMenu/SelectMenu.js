@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Modal from 'react-modal';
 import * as style from './styles';
 import Sidebar from '../../components/Menu/Sidebar';
@@ -10,7 +10,7 @@ import MenuFooter from '../../components/Menu/MenuFooter';
 import { SubTitleFont } from '../../components/style/font';
 import SetModal from '../../components/Menu/Modal/SetModal';
 import SingleModal from '../../components/Menu/Modal/SingleModal';
-import { useRecoilValue, useSetRecoilState } from 'recoil';
+import { useRecoilState } from 'recoil';
 import { ordersAtom } from '../../recoil/Order/atoms';
 
 export default function SelectMenu() {
@@ -19,10 +19,23 @@ export default function SelectMenu() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [menuName, setMenuName] = useState('');
   const [menuPrice, setMenuPrice] = useState('');
+  const [orders, setOrders] = useRecoilState(ordersAtom);
+  const [selectItem, setSelectItem] = useState(null);
+  const navigate = useNavigate();
 
-  const orderlist = useRecoilValue(ordersAtom);
-
-  console.log(orderlist);
+  const UpdateSingleOrder = (nums) => {
+    setOrders((prevOrders) => {
+      const updatedOrder = {
+        name: menuName,
+        side: null,
+        drink: null,
+        price: menuPrice,
+        number: nums,
+      };
+      return [...prevOrders, updatedOrder];
+    });
+    navigate('/selectDetail', { state: { singleMenu: true } });
+  };
 
   function getMenutype(menuType, menuTypeName) {
     setMenuType(menuType);
@@ -32,8 +45,9 @@ export default function SelectMenu() {
     setMenuName(menuName);
     setMenuPrice(menuPrice);
   }
-  function openModal() {
+  function openModal(item) {
     setModalIsOpen(true);
+    setSelectItem(item);
   }
 
   function closeModal() {
@@ -48,9 +62,17 @@ export default function SelectMenu() {
           modalIsOpen={modalIsOpen}
           menuName={menuName}
           menuPrice={menuPrice}
+          UpdateSingleOrder={UpdateSingleOrder}
         />
       ) : (
-        <SingleModal closeModal={closeModal} modalIsOpen={modalIsOpen} />
+        <SingleModal
+          closeModal={closeModal}
+          modalIsOpen={modalIsOpen}
+          menuName={menuName}
+          menuPrice={menuPrice}
+          UpdateSingleOrder={UpdateSingleOrder}
+          item={selectItem}
+        />
       )}
       <style.Wrap>
         <Sidebar menuType={menuType} getMenutype={getMenutype} />

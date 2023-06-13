@@ -15,14 +15,13 @@ import { ordersAtom } from '../../recoil/Order/atoms';
 
 export default function SelectDetail() {
   const { state } = useLocation();
-  console.log(state.menuPrice);
+  const singleMenu = state?.singleMenu;
   // 백엔드에서 받아오기
   const orderData = {
     name: state.menuName,
     price: state.menuPrice,
   };
   const navigate = useNavigate();
-  const { state } = useLocation();
   const [count, setCount] = useState(0);
   const [nums, setNums] = useState(1);
   const [order, setOrder] = useState({
@@ -43,7 +42,6 @@ export default function SelectDetail() {
     if (singleMenu) {
       setCount(4);
     }
-    console.log(singleMenu);
   }, [singleMenu]);
 
   //recoilData
