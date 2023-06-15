@@ -69,7 +69,7 @@ export default function Order(props) {
           <Price>₩{props.price * nums}</Price>
           <TrashCan
             src={'/Images/Main/trashCan.svg'}
-            onClick={() => props.deleteHandler(props.id)}
+            onClick={() => props.deleteHandler(props.order)}
           />
         </OrderInfo>
         <Quantity mini="true" nums={nums} setNums={setNums} />

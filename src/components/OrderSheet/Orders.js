@@ -29,11 +29,15 @@ export default function Orders() {
   //rocoil data
   const [orderlist, setOrderlist] = useRecoilState(ordersAtom);
 
-  const deleteHandler = (id) => {
-    setOrderlist((prevOrderlist) =>
-      prevOrderlist.filter((order) => order.id !== id),
-    );
+  const deleteHandler = (order) => {
+    const newList = orderlist.filter((currentOrder) => currentOrder !== order);
+    console.log(newList);
+    setOrderlist(newList);
   };
+
+  useEffect(()=> {
+    console.log(orderlist);
+  },[orderlist])
 
   return (
     <Container>
@@ -41,7 +45,7 @@ export default function Orders() {
       <OrdersContainer>
         {orderlist.map((data) => (
           <Order
-            id={data.id}
+            order={data}
             name={data.name}
             price={data.price}
             nums={data.number}
