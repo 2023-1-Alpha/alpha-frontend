@@ -12,7 +12,7 @@ export default function DetailFinal(props) {
       <SubTitleFont style={{ color: '#DF843E' }}>
         ￦{(price + side.price + drink.price) * props.nums}
       </SubTitleFont>
-      <img src={''} />
+      <img src={'Images/Main/BurgerSet1.svg'} />
     </style.DetailFinal>
   );
 }

@@ -27,13 +27,13 @@ export default function DetailSize(props) {
     // 추후에 map으로 데이터 뿌리기
     <style.DetailSize>
       <WhiteRoundedLargeButton
-        imgSrc={''}
+        imgSrc={'Images/Main/Burger1.svg'}
         text={name + ' 세트'}
         price={price}
         onClick={selectNormalHandler}
       />
       <WhiteRoundedLargeButton
-        imgSrc={''}
+        imgSrc={'Images/Main/BurgerSet1.svg'}
         text={name + ' 라지 세트'}
         price={price + 500}
         onClick={selectLargeHandler}

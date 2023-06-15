@@ -13,10 +13,12 @@ export default function DetailSide(props) {
   //백엔드에서 받아오기
   const sideList = [
     {
+      src : 'Images/Main/SideChurros.svg',
       name: '츄러스',
       price: 1500,
     },
     {
+      src : 'Images/Main/SideFrenchFries.svg',
       name: '감자튀김',
       price: 1200,
     },
@@ -27,7 +29,7 @@ export default function DetailSide(props) {
       <style.DetailSideInnerDiv>
         {sideList.map((side) => (
           <WhiteRoundedSmallButton
-            imgSrc={''}
+            imgSrc={side.src}
             text={side.name}
             price={side.price}
             onClick={() => onClickHander(side)}

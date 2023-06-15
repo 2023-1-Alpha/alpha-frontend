@@ -14,14 +14,17 @@ export default function DetailDrink(props) {
   //백엔드에서 받아오기
   const drinkList = [
     {
+      src : 'Images/Main/SideDrinkMilk.svg',
       name: '우유',
       price: 1000,
     },
     {
+      src : 'Images/Main/SideDrinkCoke.svg',
       name: '콜라',
       price: 1200,
     },
     {
+      src : 'Images/Main/SideDrinkCider.svg',
       name: '사이다',
       price: 1200,
     },
@@ -33,7 +36,7 @@ export default function DetailDrink(props) {
       <style.DetailDrinkInnerDiv>
         {drinkList.map((drink) => (
           <WhiteRoundedSmallButton
-            imgSrc={''}
+            imgSrc={drink.src}
             text={drink.name}
             price={drink.price}
             onClick={() => onClickHander(drink)}
